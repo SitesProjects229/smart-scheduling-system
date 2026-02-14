@@ -509,15 +509,9 @@
         overflow: hidden;
       }
 
-      .ai-tools-layout {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        gap: 4rem;
-        align-items: center;
-      }
-
-      .ai-tools-left {
-        position: relative;
+      .ai-tools-header {
+        text-align: center;
+        margin-bottom: 4rem;
       }
 
       .ai-tools-badge {
@@ -545,7 +539,7 @@
       }
 
       .ai-tools-heading {
-        font-size: 3rem;
+        font-size: 3.2rem;
         color: #F1F5F9;
         font-weight: 800;
         line-height: 1.15;
@@ -575,148 +569,350 @@
 
       .ai-tools-subtitle {
         color: #94A3B8;
-        font-size: 1.1rem;
+        font-size: 1.15rem;
         line-height: 1.8;
-        margin-bottom: 2.5rem;
-        max-width: 520px;
+        max-width: 700px;
+        margin: 0 auto;
       }
 
-      .ai-tools-features {
+      .phones-stage {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        height: 580px;
+        margin-bottom: 4rem;
+      }
+
+      .phones-stage::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 700px;
+        height: 300px;
+        background: radial-gradient(ellipse, rgba(220, 38, 38, 0.12) 0%, transparent 70%);
+        filter: blur(50px);
+        z-index: 0;
+      }
+
+      .phone-device {
+        position: absolute;
+        width: 220px;
+        height: 440px;
+        background: linear-gradient(145deg, #1a1a1a 0%, #0d0d0d 100%);
+        border-radius: 32px;
+        border: 2px solid rgba(255, 255, 255, 0.08);
+        box-shadow: 
+          0 20px 60px rgba(0, 0, 0, 0.6),
+          0 0 40px rgba(220, 38, 38, 0.05),
+          inset 0 1px 0 rgba(255, 255, 255, 0.05);
+        overflow: hidden;
+        z-index: 2;
+        transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      }
+
+      .phone-device::before {
+        content: '';
+        position: absolute;
+        top: 8px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 22px;
+        background: #000;
+        border-radius: 0 0 14px 14px;
+        z-index: 10;
+      }
+
+      .phone-device::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 30px;
+        border: 1px solid rgba(255, 255, 255, 0.04);
+        pointer-events: none;
+        z-index: 5;
+      }
+
+      .phone-device:hover {
+        transform: translateY(-10px) scale(1.02);
+      }
+
+      .phone-center {
+        bottom: 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 4;
+        width: 240px;
+        height: 480px;
+      }
+      .phone-center:hover {
+        transform: translateX(-50%) translateY(-10px) scale(1.02);
+      }
+
+      .phone-left {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(calc(-50% - 200px)) rotate(-8deg);
+        z-index: 3;
+      }
+      .phone-left:hover {
+        transform: translateX(calc(-50% - 200px)) rotate(-8deg) translateY(-10px) scale(1.02);
+      }
+
+      .phone-right {
+        bottom: 20px;
+        left: 50%;
+        transform: translateX(calc(-50% + 200px)) rotate(8deg);
+        z-index: 3;
+      }
+      .phone-right:hover {
+        transform: translateX(calc(-50% + 200px)) rotate(8deg) translateY(-10px) scale(1.02);
+      }
+
+      .phone-screen {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        right: 2px;
+        bottom: 2px;
+        background: #080808;
+        border-radius: 30px;
+        overflow: hidden;
         display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        margin-bottom: 2.5rem;
       }
 
-      .ai-feature-item {
+      .phone-statusbar {
         display: flex;
-        align-items: flex-start;
-        gap: 1rem;
-        padding: 1.2rem 1.5rem;
-        background: rgba(255, 255, 255, 0.02);
-        border: 1px solid rgba(255, 255, 255, 0.05);
-        border-radius: 16px;
-        transition: all 0.3s;
+        justify-content: space-between;
+        align-items: center;
+        padding: 38px 20px 8px;
+        font-size: 0.65rem;
+        color: #999;
+        font-weight: 600;
       }
 
-      .ai-feature-item:hover {
-        background: rgba(220, 38, 38, 0.05);
-        border-color: rgba(220, 38, 38, 0.15);
-        transform: translateX(5px);
+      .phone-app-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 16px 12px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.05);
       }
 
-      .ai-feature-icon {
-        width: 48px;
-        height: 48px;
-        min-width: 48px;
-        border-radius: 12px;
+      .phone-app-logo {
         display: flex;
         align-items: center;
-        justify-content: center;
-        font-size: 1.3rem;
-      }
-
-      .ai-feature-icon.red { background: rgba(220, 38, 38, 0.15); }
-      .ai-feature-icon.green { background: rgba(16, 185, 129, 0.15); }
-      .ai-feature-icon.blue { background: rgba(59, 130, 246, 0.15); }
-      .ai-feature-icon.yellow { background: rgba(245, 158, 11, 0.15); }
-
-      .ai-feature-text h4 {
+        gap: 6px;
+        font-size: 0.8rem;
+        font-weight: 700;
         color: #F1F5F9;
-        font-size: 1.05rem;
-        font-weight: 700;
-        margin-bottom: 0.3rem;
-      }
-
-      .ai-feature-text p {
-        color: #94A3B8;
-        font-size: 0.9rem;
-        line-height: 1.6;
-      }
-
-      .ai-tools-cta {
-        display: flex;
-        align-items: center;
-        gap: 1.5rem;
-      }
-
-      .ai-tools-btn {
-        background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
-        color: white;
-        padding: 1rem 2.5rem;
-        border-radius: 12px;
-        border: none;
-        font-weight: 700;
-        font-size: 1rem;
-        cursor: pointer;
-        transition: all 0.3s;
-        box-shadow: 0 4px 20px rgba(220, 38, 38, 0.35);
         font-family: 'Montserrat', sans-serif;
       }
 
-      .ai-tools-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5);
+      .phone-app-logo-icon {
+        width: 20px;
+        height: 20px;
+        background: #DC2626;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
+        color: white;
+        font-weight: 800;
       }
 
-      .ai-tools-stats-row {
+      .phone-balance-section {
+        padding: 16px 16px 10px;
+        text-align: center;
+      }
+
+      .phone-balance-label {
+        color: #64748B;
+        font-size: 0.65rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 4px;
+      }
+
+      .phone-balance-amount {
+        font-size: 1.8rem;
+        font-weight: 800;
+        color: #F1F5F9;
+        font-family: 'Montserrat', sans-serif;
+        line-height: 1.2;
+      }
+
+      .phone-balance-change {
+        display: inline-flex;
+        align-items: center;
+        gap: 3px;
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-top: 4px;
+        padding: 3px 10px;
+        border-radius: 20px;
+      }
+
+      .phone-balance-change.positive {
+        color: #10B981;
+        background: rgba(16, 185, 129, 0.1);
+      }
+
+      .phone-chart-area {
+        flex: 1;
+        padding: 8px 12px;
         display: flex;
-        gap: 2rem;
-        font-size: 0.85rem;
+        align-items: flex-end;
+        min-height: 120px;
+      }
+
+      .phone-chart-area svg {
+        width: 100%;
+        height: 100%;
+      }
+
+      .phone-assets-list {
+        padding: 10px 14px;
+      }
+
+      .phone-asset-row {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 8px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+      }
+
+      .phone-asset-row:last-child {
+        border-bottom: none;
+      }
+
+      .phone-asset-left {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .phone-asset-icon {
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.75rem;
+        font-weight: 800;
+        color: white;
+      }
+
+      .phone-asset-icon.btc { background: linear-gradient(135deg, #F7931A, #E8860B); }
+      .phone-asset-icon.eth { background: linear-gradient(135deg, #627EEA, #4A6BD4); }
+      .phone-asset-icon.sol { background: linear-gradient(135deg, #9945FF, #14F195); }
+      .phone-asset-icon.bnb { background: linear-gradient(135deg, #F3BA2F, #D4A429); }
+      .phone-asset-icon.xrp { background: linear-gradient(135deg, #00AAE4, #0088B7); }
+      .phone-asset-icon.ada { background: linear-gradient(135deg, #0033AD, #002A8C); }
+
+      .phone-asset-name {
+        font-size: 0.75rem;
+        font-weight: 700;
+        color: #E2E8F0;
+      }
+
+      .phone-asset-ticker {
+        font-size: 0.6rem;
         color: #64748B;
       }
 
-      .ai-tools-stats-row span {
-        display: flex;
-        align-items: center;
-        gap: 0.4rem;
+      .phone-asset-right {
+        text-align: right;
       }
 
-      .ai-tools-stats-row .stat-value {
-        color: #E2E8F0;
+      .phone-asset-price {
+        font-size: 0.72rem;
         font-weight: 700;
+        color: #E2E8F0;
       }
 
-      .ai-tools-right {
-        position: relative;
+      .phone-asset-pnl {
+        font-size: 0.6rem;
+        font-weight: 600;
+      }
+
+      .phone-asset-pnl.up { color: #10B981; }
+
+      .phone-bottom-nav {
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
+        padding: 10px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.05);
+        margin-top: auto;
+      }
+
+      .phone-nav-item {
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        min-height: 500px;
+        gap: 2px;
+        font-size: 0.55rem;
+        color: #475569;
       }
 
-      .phones-showcase {
-        position: relative;
-        width: 100%;
-        max-width: 550px;
-        aspect-ratio: 1;
+      .phone-nav-item.active {
+        color: #DC2626;
       }
 
-      .phones-showcase img {
-        width: 100%;
-        height: 100%;
-        object-fit: contain;
-        border-radius: 24px;
-        position: relative;
-        z-index: 2;
+      .phone-nav-dot {
+        width: 18px;
+        height: 18px;
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.65rem;
       }
 
-      .phones-showcase::before {
-        content: '';
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        width: 80%;
-        height: 80%;
-        background: radial-gradient(circle, rgba(220, 38, 38, 0.2) 0%, transparent 70%);
-        z-index: 1;
-        filter: blur(40px);
+      .phone-trade-btn {
+        display: block;
+        margin: 8px 14px 10px;
+        padding: 10px;
+        background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+        border: none;
+        border-radius: 12px;
+        color: white;
+        font-weight: 700;
+        font-size: 0.75rem;
+        text-align: center;
+        font-family: 'Montserrat', sans-serif;
+        letter-spacing: 0.5px;
+      }
+
+      .phone-mini-chart {
+        display: flex;
+        align-items: flex-end;
+        gap: 2px;
+        height: 30px;
+        padding: 0 14px;
+        margin-bottom: 6px;
+      }
+
+      .phone-mini-bar {
+        flex: 1;
+        background: linear-gradient(to top, rgba(16, 185, 129, 0.3), rgba(16, 185, 129, 0.8));
+        border-radius: 2px 2px 0 0;
+        min-height: 3px;
       }
 
       .floating-stat {
         position: absolute;
-        background: rgba(10, 10, 10, 0.9);
+        background: rgba(10, 10, 10, 0.92);
         backdrop-filter: blur(20px);
         border: 1px solid rgba(255, 255, 255, 0.08);
         border-radius: 14px;
@@ -727,20 +923,20 @@
       }
 
       .floating-stat-1 {
-        top: 5%;
-        right: -5%;
+        top: 8%;
+        right: 8%;
         animation-delay: 0s;
       }
 
       .floating-stat-2 {
-        bottom: 15%;
-        left: -8%;
+        bottom: 18%;
+        left: 8%;
         animation-delay: 1.5s;
       }
 
       .floating-stat-3 {
-        bottom: 5%;
-        right: 2%;
+        bottom: 8%;
+        right: 12%;
         animation-delay: 3s;
       }
 
@@ -765,7 +961,100 @@
       }
 
       .floating-stat .fs-value.green { color: #10B981; }
-      .floating-stat .fs-value.red-text { color: #EF4444; }
+
+      .ai-tools-features-grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        gap: 1.5rem;
+        margin-bottom: 3rem;
+      }
+
+      .ai-feature-card {
+        background: rgba(255, 255, 255, 0.02);
+        border: 1px solid rgba(255, 255, 255, 0.05);
+        border-radius: 20px;
+        padding: 2rem 1.5rem;
+        text-align: center;
+        transition: all 0.3s;
+      }
+
+      .ai-feature-card:hover {
+        background: rgba(220, 38, 38, 0.04);
+        border-color: rgba(220, 38, 38, 0.15);
+        transform: translateY(-5px);
+      }
+
+      .ai-feature-card-icon {
+        width: 56px;
+        height: 56px;
+        border-radius: 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        margin: 0 auto 1rem;
+      }
+
+      .ai-feature-card-icon.red { background: rgba(220, 38, 38, 0.12); }
+      .ai-feature-card-icon.green { background: rgba(16, 185, 129, 0.12); }
+      .ai-feature-card-icon.blue { background: rgba(59, 130, 246, 0.12); }
+      .ai-feature-card-icon.yellow { background: rgba(245, 158, 11, 0.12); }
+
+      .ai-feature-card h4 {
+        color: #F1F5F9;
+        font-size: 1.05rem;
+        font-weight: 700;
+        margin-bottom: 0.5rem;
+      }
+
+      .ai-feature-card p {
+        color: #94A3B8;
+        font-size: 0.85rem;
+        line-height: 1.6;
+      }
+
+      .ai-tools-cta-center {
+        text-align: center;
+      }
+
+      .ai-tools-btn {
+        background: linear-gradient(135deg, #DC2626 0%, #EF4444 100%);
+        color: white;
+        padding: 1rem 3rem;
+        border-radius: 12px;
+        border: none;
+        font-weight: 700;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 4px 20px rgba(220, 38, 38, 0.35);
+        font-family: 'Montserrat', sans-serif;
+      }
+
+      .ai-tools-btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 30px rgba(220, 38, 38, 0.5);
+      }
+
+      .ai-tools-trust-row {
+        display: flex;
+        justify-content: center;
+        gap: 3rem;
+        margin-top: 1.5rem;
+        font-size: 0.85rem;
+        color: #64748B;
+      }
+
+      .ai-tools-trust-row span {
+        display: flex;
+        align-items: center;
+        gap: 0.4rem;
+      }
+
+      .ai-tools-trust-row .tv {
+        color: #E2E8F0;
+        font-weight: 700;
+      }
       
       .trading-dashboard-section {
         padding: 5rem 0;
@@ -2862,26 +3151,54 @@
           height: 50px;
         }
         
-        .ai-tools-layout {
-          grid-template-columns: 1fr;
-          gap: 2.5rem;
-        }
-
         .ai-tools-heading {
           font-size: 2rem;
         }
 
-        .ai-tools-right {
-          min-height: 350px;
+        .phones-stage {
+          height: 420px;
+          margin-bottom: 2.5rem;
         }
 
-        .floating-stat-1 { right: 0; }
-        .floating-stat-2 { left: 0; }
+        .phone-device {
+          width: 160px;
+          height: 320px;
+          border-radius: 24px;
+        }
 
-        .ai-tools-cta {
-          flex-direction: column;
-          align-items: flex-start;
+        .phone-device::before {
+          width: 60px;
+          height: 18px;
+          border-radius: 0 0 10px 10px;
+        }
+
+        .phone-center {
+          width: 180px;
+          height: 360px;
+        }
+
+        .phone-left {
+          transform: translateX(calc(-50% - 140px)) rotate(-8deg);
+        }
+
+        .phone-right {
+          transform: translateX(calc(-50% + 140px)) rotate(8deg);
+        }
+
+        .phone-balance-amount { font-size: 1.3rem; }
+        .phone-statusbar { padding: 32px 14px 6px; }
+
+        .ai-tools-features-grid {
+          grid-template-columns: 1fr 1fr;
           gap: 1rem;
+        }
+
+        .floating-stat { display: none; }
+
+        .ai-tools-trust-row {
+          flex-wrap: wrap;
+          justify-content: center;
+          gap: 1.5rem;
         }
         
         .dashboard-grid {
@@ -3153,81 +3470,297 @@
 
     <section class="ai-tools-section">
       <div class="container">
-        <div class="ai-tools-layout">
-          <div class="ai-tools-left">
-            <div class="ai-tools-badge">
-              <span class="ai-tools-badge-dot"></span>
-              AI-Powered Trading Suite
-            </div>
-            
-            <h2 class="ai-tools-heading">
-              Your Money Works<br>
-              <span class="highlight">While You Sleep</span>
-            </h2>
-            
-            <p class="ai-tools-subtitle">
-              Join 150,000+ traders who already trust Haltrovex to grow their portfolio on autopilot. Our AI scans markets 24/7, executes trades in milliseconds, and delivers consistent results — so you don't have to.
-            </p>
+        <div class="ai-tools-header">
+          <div class="ai-tools-badge">
+            <span class="ai-tools-badge-dot"></span>
+            AI-Powered Trading Suite
+          </div>
+          <h2 class="ai-tools-heading">
+            Your Money Works <span class="highlight">While You Sleep</span>
+          </h2>
+          <p class="ai-tools-subtitle">
+            Join 150,000+ traders who trust Haltrovex to grow their portfolio on autopilot. Our AI scans markets 24/7, executes trades in milliseconds, and delivers consistent results.
+          </p>
+        </div>
 
-            <div class="ai-tools-features">
-              <div class="ai-feature-item">
-                <div class="ai-feature-icon red">⚡</div>
-                <div class="ai-feature-text">
-                  <h4>Instant AI Execution</h4>
-                  <p>Our algorithms detect opportunities and execute trades in under 10ms — faster than any human can react.</p>
+        <div class="phones-stage">
+          <div class="phone-device phone-left">
+            <div class="phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <span>●●●●● ▁▂▃</span>
+              </div>
+              <div class="phone-app-header">
+                <div class="phone-app-logo">
+                  <div class="phone-app-logo-icon">≋</div>
+                  Haltrovex
+                </div>
+                <span style="color:#10B981;font-size:0.7rem;font-weight:700">● Live</span>
+              </div>
+              <div class="phone-balance-section">
+                <div class="phone-balance-label">Total Balance</div>
+                <div class="phone-balance-amount">$184,729</div>
+                <div class="phone-balance-change positive">▲ +12.4% today</div>
+              </div>
+              <div class="phone-mini-chart">
+                <div class="phone-mini-bar" style="height:40%"></div>
+                <div class="phone-mini-bar" style="height:55%"></div>
+                <div class="phone-mini-bar" style="height:45%"></div>
+                <div class="phone-mini-bar" style="height:60%"></div>
+                <div class="phone-mini-bar" style="height:50%"></div>
+                <div class="phone-mini-bar" style="height:70%"></div>
+                <div class="phone-mini-bar" style="height:65%"></div>
+                <div class="phone-mini-bar" style="height:80%"></div>
+                <div class="phone-mini-bar" style="height:75%"></div>
+                <div class="phone-mini-bar" style="height:85%"></div>
+                <div class="phone-mini-bar" style="height:90%"></div>
+                <div class="phone-mini-bar" style="height:88%"></div>
+                <div class="phone-mini-bar" style="height:95%"></div>
+                <div class="phone-mini-bar" style="height:100%"></div>
+              </div>
+              <div class="phone-assets-list">
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon btc">₿</div>
+                    <div>
+                      <div class="phone-asset-name">Bitcoin</div>
+                      <div class="phone-asset-ticker">BTC</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">$97,241</div>
+                    <div class="phone-asset-pnl up">+3.2%</div>
+                  </div>
+                </div>
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon eth">Ξ</div>
+                    <div>
+                      <div class="phone-asset-name">Ethereum</div>
+                      <div class="phone-asset-ticker">ETH</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">$3,847</div>
+                    <div class="phone-asset-pnl up">+5.7%</div>
+                  </div>
+                </div>
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon sol">◎</div>
+                    <div>
+                      <div class="phone-asset-name">Solana</div>
+                      <div class="phone-asset-ticker">SOL</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">$247.8</div>
+                    <div class="phone-asset-pnl up">+8.1%</div>
+                  </div>
                 </div>
               </div>
-              <div class="ai-feature-item">
-                <div class="ai-feature-icon green">🔒</div>
-                <div class="ai-feature-text">
-                  <h4>Bank-Grade Security</h4>
-                  <p>AES-256 encryption, cold storage for assets, and multi-factor authentication protect every cent you invest.</p>
-                </div>
-              </div>
-              <div class="ai-feature-item">
-                <div class="ai-feature-icon blue">📊</div>
-                <div class="ai-feature-text">
-                  <h4>Smart Portfolio Management</h4>
-                  <p>Set your risk level and let AI automatically diversify across crypto, forex, and stocks for optimal returns.</p>
-                </div>
-              </div>
-              <div class="ai-feature-item">
-                <div class="ai-feature-icon yellow">🏆</div>
-                <div class="ai-feature-text">
-                  <h4>24/7 Expert Support</h4>
-                  <p>Dedicated team of trading specialists available around the clock to help you maximize your results.</p>
-                </div>
-              </div>
-            </div>
-
-            <div class="ai-tools-cta">
-              <button class="ai-tools-btn" onclick="scrollToForm()">START EARNING NOW</button>
-              <div class="ai-tools-stats-row">
-                <span><span class="stat-value">$2.5B+</span> traded</span>
-                <span><span class="stat-value">99.9%</span> uptime</span>
+              <div class="phone-bottom-nav">
+                <div class="phone-nav-item active"><div class="phone-nav-dot">◈</div>Home</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">◉</div>Markets</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">◧</div>Trade</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">☰</div>More</div>
               </div>
             </div>
           </div>
 
-          <div class="ai-tools-right">
-            <div class="phones-showcase">
-              <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/28faf5bc-8110-4470-927a-0b52b04f9db1.jpg" alt="Haltrovex AI Trading Platform on Smartphones — Crypto Portfolio Growth" loading="lazy">
-              
-              <div class="floating-stat floating-stat-1">
-                <div class="fs-label">Portfolio Growth</div>
-                <div class="fs-value green">+847.3%</div>
+          <div class="phone-device phone-center">
+            <div class="phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <span>●●●●● ▁▂▃</span>
               </div>
-              
-              <div class="floating-stat floating-stat-2">
-                <div class="fs-label">Active Trades</div>
-                <div class="fs-value">1,247</div>
+              <div class="phone-app-header">
+                <div class="phone-app-logo">
+                  <div class="phone-app-logo-icon">≋</div>
+                  Haltrovex
+                </div>
+                <span style="color:#10B981;font-size:0.7rem;font-weight:700">● Live</span>
               </div>
-              
-              <div class="floating-stat floating-stat-3">
-                <div class="fs-label">Win Rate</div>
-                <div class="fs-value green">94.7%</div>
+              <div class="phone-balance-section">
+                <div class="phone-balance-label">Portfolio Value</div>
+                <div class="phone-balance-amount">$847,293</div>
+                <div class="phone-balance-change positive">▲ +$18,472 today</div>
+              </div>
+              <div class="phone-chart-area">
+                <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="phoneGrad1" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.4"/>
+                      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,80 Q20,75 35,65 T70,50 T100,40 T130,30 T160,25 T200,10 L200,100 L0,100Z" fill="url(#phoneGrad1)"/>
+                  <path d="M0,80 Q20,75 35,65 T70,50 T100,40 T130,30 T160,25 T200,10" fill="none" stroke="#10B981" stroke-width="2.5"/>
+                  <circle cx="200" cy="10" r="3" fill="#10B981"/>
+                  <circle cx="200" cy="10" r="6" fill="none" stroke="#10B981" stroke-width="1" opacity="0.4"/>
+                </svg>
+              </div>
+              <div class="phone-trade-btn">START AI TRADING</div>
+              <div class="phone-assets-list">
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon btc">₿</div>
+                    <div>
+                      <div class="phone-asset-name">Bitcoin</div>
+                      <div class="phone-asset-ticker">2.41 BTC</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">$234,551</div>
+                    <div class="phone-asset-pnl up">+24.8%</div>
+                  </div>
+                </div>
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon eth">Ξ</div>
+                    <div>
+                      <div class="phone-asset-name">Ethereum</div>
+                      <div class="phone-asset-ticker">48.7 ETH</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">$187,328</div>
+                    <div class="phone-asset-pnl up">+31.2%</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-bottom-nav">
+                <div class="phone-nav-item active"><div class="phone-nav-dot">◈</div>Home</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">◉</div>Markets</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">◧</div>Trade</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">☰</div>More</div>
               </div>
             </div>
+          </div>
+
+          <div class="phone-device phone-right">
+            <div class="phone-screen">
+              <div class="phone-statusbar">
+                <span>9:41</span>
+                <span>●●●●● ▁▂▃</span>
+              </div>
+              <div class="phone-app-header">
+                <div class="phone-app-logo">
+                  <div class="phone-app-logo-icon">≋</div>
+                  AI Signals
+                </div>
+                <span style="color:#F59E0B;font-size:0.7rem;font-weight:700">⚡ Auto</span>
+              </div>
+              <div class="phone-balance-section">
+                <div class="phone-balance-label">Today's Profit</div>
+                <div class="phone-balance-amount" style="color:#10B981">+$4,291</div>
+                <div class="phone-balance-change positive">▲ 14 winning trades</div>
+              </div>
+              <div class="phone-chart-area">
+                <svg viewBox="0 0 200 100" preserveAspectRatio="none">
+                  <defs>
+                    <linearGradient id="phoneGrad2" x1="0%" y1="0%" x2="0%" y2="100%">
+                      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.3"/>
+                      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0"/>
+                    </linearGradient>
+                  </defs>
+                  <path d="M0,90 Q15,85 30,70 T60,60 T90,55 T120,35 T150,40 T180,20 T200,15 L200,100 L0,100Z" fill="url(#phoneGrad2)"/>
+                  <path d="M0,90 Q15,85 30,70 T60,60 T90,55 T120,35 T150,40 T180,20 T200,15" fill="none" stroke="#10B981" stroke-width="2"/>
+                </svg>
+              </div>
+              <div class="phone-assets-list">
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon bnb">B</div>
+                    <div>
+                      <div class="phone-asset-name">BNB/USDT</div>
+                      <div class="phone-asset-ticker">AI Signal: BUY</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">+$847</div>
+                    <div class="phone-asset-pnl up">Closed ✓</div>
+                  </div>
+                </div>
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon xrp">X</div>
+                    <div>
+                      <div class="phone-asset-name">XRP/USDT</div>
+                      <div class="phone-asset-ticker">AI Signal: BUY</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price">+$1,293</div>
+                    <div class="phone-asset-pnl up">Closed ✓</div>
+                  </div>
+                </div>
+                <div class="phone-asset-row">
+                  <div class="phone-asset-left">
+                    <div class="phone-asset-icon ada">A</div>
+                    <div>
+                      <div class="phone-asset-name">ADA/USDT</div>
+                      <div class="phone-asset-ticker" style="color:#F59E0B">Active ⟳</div>
+                    </div>
+                  </div>
+                  <div class="phone-asset-right">
+                    <div class="phone-asset-price" style="color:#10B981">+$412</div>
+                    <div class="phone-asset-pnl up">Running...</div>
+                  </div>
+                </div>
+              </div>
+              <div class="phone-bottom-nav">
+                <div class="phone-nav-item"><div class="phone-nav-dot">◈</div>Home</div>
+                <div class="phone-nav-item active"><div class="phone-nav-dot">◉</div>Signals</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">◧</div>Trade</div>
+                <div class="phone-nav-item"><div class="phone-nav-dot">☰</div>More</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="floating-stat floating-stat-1">
+            <div class="fs-label">Portfolio Growth</div>
+            <div class="fs-value green">+847.3%</div>
+          </div>
+          <div class="floating-stat floating-stat-2">
+            <div class="fs-label">Active Trades</div>
+            <div class="fs-value">1,247</div>
+          </div>
+          <div class="floating-stat floating-stat-3">
+            <div class="fs-label">Win Rate</div>
+            <div class="fs-value green">94.7%</div>
+          </div>
+        </div>
+
+        <div class="ai-tools-features-grid">
+          <div class="ai-feature-card">
+            <div class="ai-feature-card-icon red">⚡</div>
+            <h4>Instant AI Execution</h4>
+            <p>Trades executed in under 10ms — faster than any human can react to market changes.</p>
+          </div>
+          <div class="ai-feature-card">
+            <div class="ai-feature-card-icon green">🔒</div>
+            <h4>Bank-Grade Security</h4>
+            <p>AES-256 encryption and multi-factor authentication protect every cent you invest.</p>
+          </div>
+          <div class="ai-feature-card">
+            <div class="ai-feature-card-icon blue">📊</div>
+            <h4>Smart Portfolio</h4>
+            <p>AI automatically diversifies across crypto, forex, and stocks for optimal returns.</p>
+          </div>
+          <div class="ai-feature-card">
+            <div class="ai-feature-card-icon yellow">🏆</div>
+            <h4>24/7 Expert Support</h4>
+            <p>Dedicated trading specialists available around the clock to maximize your results.</p>
+          </div>
+        </div>
+
+        <div class="ai-tools-cta-center">
+          <button class="ai-tools-btn" onclick="scrollToForm()">START EARNING NOW</button>
+          <div class="ai-tools-trust-row">
+            <span><span class="tv">$2.5B+</span> traded</span>
+            <span><span class="tv">150K+</span> traders</span>
+            <span><span class="tv">99.9%</span> uptime</span>
           </div>
         </div>
       </div>

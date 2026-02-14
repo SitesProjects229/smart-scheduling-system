@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Haltrovex Official™ — Tekoälyvetoinen kaupankäyntialusta 2026 | Automatisoitu krypto-, forex- ja osakekauppa",
+    "description": "Haltrovex on virallinen tekoälykaupankäyntialusta osoitteessa haltrovex-official.org. Automatisoi krypto-, forex- ja osakekauppa älykkäillä algoritmeilla. Luotettu maailmanlaajuisesti. Aloita ilmaiseksi tänään.",
+    "keywords": "Haltrovex, Haltrovex virallinen, haltrovex-official.org, Haltrovex-alusta, Haltrovex-kaupankäynti, Haltrovex sovellus, Haltrovex arvostelu 2026, tekoälykaupankäyntialusta, automatisoitu kaupankäynti, kryptokaupankäyntibotti, forex-kaupankäynti-AI, osakekaupan automatisointi"
+  },
+  "hero": {
+    "title": "Haltrovex — Virallinen tekoälykaupankäyntialusta",
+    "subtitle": "Haltrovex on virallinen tekoälyvetoinen kaupankäyntialusta, joka on suunniteltu käyttäjille, jotka haluavat yksinkertaistetun pääsyn kryptoon, forexiin, osakkeisiin ja hyödykkeisiin älykkään automatisoinnin kautta.",
+    "brandInfo": "Haltrovex™ on virallinen brändi ja alusta. Ainoa virallinen verkkosivusto on",
+    "excellent": "Erinomainen"
+  },
+  "form": {
+    "heading": "Täytä alla oleva lomake aloittaaksesi",
+    "firstName": "Etunimi",
+    "lastName": "Sukunimi",
+    "email": "Sähköpostiosoite",
+    "phone": "Puhelinnumero",
+    "submit": "REKISTERÖIDY NYT",
+    "security": "Tietosi on salattu ja suojattu tietoturvapöytäkirjoilla",
+    "disclaimer": "Antamalla tietosi vahvistat, että olet lukenut, ymmärtänyt ja hyväksynyt tämän verkkosivuston käyttöehdot ja tietosuojakäytännön."
+  },
+  "aiTools": {
+    "title": "Tekoälykäyttöiset työkalut",
+    "titleHighlight": "älykkäämpään kaupankäyntiin",
+    "description": "Haltrovex yhdistää huippuluokan tekoälyn intuitiiviseen suunnitteluun tarjotakseen kauppiaille reaaliaikaisia oivalluksia, automatisoituja strategioita ja saumatonta toteutusta useilla markkinoilla.",
+    "tool1Title": "Ennakoiva markkina-analyysi",
+    "tool1Desc": "Tekoälyalgoritmimme analysoivat miljoonia datapisteitä ennustaakseen markkinatrendit ennen niiden tapahtumista, antaen sinulle kilpailuedun.",
+    "tool2Title": "Automatisoitu salkunhallinta",
+    "tool2Desc": "Aseta riskipreferenssisi ja anna älykäs järjestelmämme automaattisesti tasapainottaa salkkusi optimaalista tuottoa varten.",
+    "tool3Title": "Reaaliaikainen signaalin tunnistus",
+    "tool3Desc": "Saa välittömät hälytykset kannattavista kaupankäyntimahdollisuuksista krypto-, forex- ja osakemarkkinoilla ympäri vuorokauden."
+  },
+  "dashboard": {
+    "title": "Henkilökohtainen",
+    "titleHighlight": "kaupankäyntikojelautasi",
+    "text1": "Käytä koko kaupankäyntiekosysteemiäsi yhdestä intuitiivisesta käyttöliittymästä. Seuraa live-markkinoita, seuraa salkkusi suorituskykyä ja toteuta kauppoja luottavaisesti.",
+    "text2": "Kojelautamme tarjoaa reaaliaikaisen datan visualisoinnin, edistyneet kartoitustyökalut ja välittömät toteutusmahdollisuudet – kaikki suunniteltu auttamaan sinua tekemään tietoon perustuvia päätöksiä nopeammin.",
+    "beginJourney": "Aloita matkasi",
+    "liveTrading": "Live-kaupankäynti",
+    "profit": "+24,5% voitto",
+    "priceChange": "+1 234,56€ (5,2%)",
+    "marketOpen": "Markkinat auki",
+    "holdRecommendation": "PIDÄ"
+  },
+  "mastery": {
+    "subtitle": "Liity tuhansiin kauppiaisiin, jotka ovat muuttaneet sijoituslähestymistapansa",
+    "title": "Hallitse markkinat kolmessa yksinkertaisessa vaiheessa",
+    "step1Title": "Luo tilisi",
+    "step1Desc": "Rekisteröidy minuuteissa ja suorita yksinkertainen vahvistusprosessi. Monimutkaista asennusta ei tarvita.",
+    "step2Title": "Määritä strategiasi",
+    "step2Desc": "Valitse valmiista tekoälystrategioista tai mukauta omasi. Aseta riskinsietosi ja sijoitustavoitteesi.",
+    "step3Title": "Aloita automaattinen kaupankäynti",
+    "step3Desc": "Katso, kun tekoälymme toteuttaa kauppoja puolestasi, optimoiden maksimaalisen tuoton, kun keskityt olennaisiin asioihin.",
+    "description1": "Haltrovexin älykäs kaupankäyntialusta käsittelee monimutkaisuuden, kun sinä säilytät täyden hallinnan. Teknologiamme toimii ympäri vuorokauden, analysoi markkinoita ja toteuttaa strategioita tarkkuudella, joka ylittää inhimilliset kyvyt.",
+    "description2": "Oletpa sitten aloittelija tai kokenut kauppias, Haltrovex mukautuu tarpeisiisi ja kasvaa asiantuntemuksesi mukana."
+  },
+  "reviews": {
+    "title": "Todellisia tuloksia todellisiltä kauppiailta",
+    "joinText": "Valmis liittymään menestyviä kauppiaita yhteisöömme?",
+    "joinNow": "Liity Haltrovexiin nyt"
+  },
+  "countdown": {
+    "badge": "Rajoitettu aika tarjous",
+    "title": "Eksklusiivinen tervetuliaisbonus päättyy pian!",
+    "subtitle": "Uudet käyttäjät saavat premium-ominaisuudet ilmaiseksi 30 päiväksi",
+    "days": "Päivää",
+    "hours": "Tuntia",
+    "minutes": "Minuuttia",
+    "seconds": "Sekuntia",
+    "claimBonus": "Lunasta bonuksesi",
+    "spotsRemaining": "Vain 47 paikkaa jäljellä tällä bonustasolla!"
+  },
+  "certification": {
+    "title": "Sertifioitu ja säännelty kaupankäyntialusta",
+    "description": "Haltrovex toimii tiukkojen rahoitussäännösten mukaisesti ja ylläpitää korkeimpia turvallisuusstandardeja. Sijoituksesi on suojattu alan johtavalla salauksella ja vaatimustenmukaisuusprotokollilla.",
+    "viewCertificate": "Näytä sertifikaatti",
+    "hideDetails": "Piilota tiedot"
+  }
+}

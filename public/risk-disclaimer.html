@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Risk Disclaimer - Haltrovex AI Trading Platform</title>
+    <meta name="description" content="Important risk disclosure and disclaimer information for using Haltrovex trading platform."/>
+    <link rel="icon" type="image/png" href="https://cdn.poehali.dev/projects/dec2b247-100c-4952-8c09-827ed14bdcb9/files/favicon-1764961895015.png">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+      
+      :root {
+        --primary: #7C3AED;
+        --secondary: #0EA5E9;
+        --background: #F5F7FA;
+        --card-bg: #FFFFFF;
+        --text-primary: #1A1F2E;
+        --text-muted: #64748B;
+        --border: #E2E8F0;
+        --warning: #F59E0B;
+        --danger: #EF4444;
+        --gradient-primary: linear-gradient(135deg, #7C3AED 0%, #0EA5E9 100%);
+      }
+      
+      body {
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        background-color: var(--background);
+        color: var(--text-primary);
+        line-height: 1.6;
+      }
+      
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        line-height: 1.2;
+      }
+      
+      .container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 20px;
+      }
+      
+      header {
+        background: #2C2C2E;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+        padding: 1rem 0;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      
+      nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      
+      .logo {
+        font-size: 1.5rem;
+        font-weight: 700;
+        color: #5B8FF9;
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        text-decoration: none;
+      }
+      
+      .logo-icon {
+        width: 32px;
+        height: 32px;
+        background: #5B8FF9;
+        border-radius: 6px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: white;
+        font-weight: 800;
+        font-size: 1.2rem;
+      }
+      
+      .nav-links {
+        display: flex;
+        gap: 2rem;
+        list-style: none;
+        align-items: center;
+      }
+      
+      .nav-links a {
+        text-decoration: none;
+        color: #B4B4B8;
+        font-weight: 500;
+        font-size: 0.95rem;
+        transition: color 0.3s;
+      }
+      
+      .nav-links a:hover {
+        color: white;
+      }
+      
+      .hero-disclaimer {
+        padding: 5rem 0 3rem;
+        background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 50%, #FECACA 100%);
+        text-align: center;
+      }
+      
+      .warning-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(239, 68, 68, 0.15);
+        color: #EF4444;
+        padding: 0.75rem 1.5rem;
+        border-radius: 30px;
+        font-weight: 600;
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+      }
+      
+      .hero-disclaimer h1 {
+        font-size: 3.5rem;
+        color: #DC2626;
+        margin-bottom: 1.5rem;
+      }
+      
+      .hero-disclaimer p {
+        font-size: 1.2rem;
+        color: #991B1B;
+        max-width: 800px;
+        margin: 0 auto 2rem;
+        line-height: 1.8;
+      }
+      
+      .btn-back-home {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.75rem;
+        background: linear-gradient(90deg, #5B8FF9 0%, #8B5CF6 100%);
+        color: white;
+        padding: 1rem 2.5rem;
+        border-radius: 14px;
+        border: none;
+        font-weight: 700;
+        font-size: 1.1rem;
+        text-decoration: none;
+        cursor: pointer;
+        transition: all 0.3s;
+        box-shadow: 0 6px 25px rgba(91, 143, 249, 0.4);
+      }
+      
+      .btn-back-home:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 10px 35px rgba(91, 143, 249, 0.5);
+      }
+      
+      .section {
+        padding: 5rem 0;
+      }
+      
+      .content-wrapper {
+        max-width: 900px;
+        margin: 0 auto;
+        background: white;
+        padding: 3rem;
+        border-radius: 24px;
+        box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+      }
+      
+      .risk-alert {
+        background: linear-gradient(135deg, #FEF2F2 0%, #FEE2E2 100%);
+        border-left: 4px solid #EF4444;
+        padding: 1.5rem;
+        margin-bottom: 2rem;
+        border-radius: 12px;
+      }
+      
+      .risk-alert h3 {
+        color: #DC2626;
+        margin-bottom: 0.75rem;
+        font-size: 1.3rem;
+      }
+      
+      .risk-alert p {
+        color: #991B1B;
+        line-height: 1.7;
+      }
+      
+      .content-wrapper h2 {
+        font-size: 2rem;
+        color: #2C2C2E;
+        margin-top: 3rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .content-wrapper h2:first-of-type {
+        margin-top: 0;
+      }
+      
+      .content-wrapper h3 {
+        font-size: 1.4rem;
+        color: #2C2C2E;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+      }
+      
+      .content-wrapper p {
+        color: #64748B;
+        line-height: 1.8;
+        margin-bottom: 1.5rem;
+        font-size: 1.05rem;
+      }
+      
+      .content-wrapper ul {
+        margin-left: 2rem;
+        margin-bottom: 1.5rem;
+      }
+      
+      .content-wrapper ul li {
+        color: #64748B;
+        line-height: 1.8;
+        margin-bottom: 0.75rem;
+        font-size: 1.05rem;
+      }
+      
+      .warning-box {
+        background: rgba(245, 158, 11, 0.1);
+        border: 2px solid #F59E0B;
+        padding: 1.5rem;
+        border-radius: 12px;
+        margin: 2rem 0;
+      }
+      
+      .warning-box strong {
+        color: #D97706;
+        font-size: 1.1rem;
+      }
+      
+      .last-updated {
+        text-align: center;
+        color: #94A3B8;
+        font-size: 0.95rem;
+        margin-top: 3rem;
+        padding-top: 2rem;
+        border-top: 1px solid #E2E8F0;
+      }
+      
+      footer {
+        background: #2C2C2E;
+        color: white;
+        padding: 3rem 0 2rem;
+      }
+      
+      .footer-content {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 3rem;
+        margin-bottom: 2rem;
+      }
+      
+      .footer-section h3 {
+        margin-bottom: 1rem;
+        font-size: 1.2rem;
+      }
+      
+      .footer-links {
+        list-style: none;
+      }
+      
+      .footer-links li {
+        margin-bottom: 0.75rem;
+      }
+      
+      .footer-links a {
+        color: rgba(255,255,255,0.8);
+        text-decoration: none;
+        transition: color 0.3s;
+      }
+      
+      .footer-links a:hover {
+        color: white;
+      }
+      
+      .footer-bottom {
+        text-align: center;
+        padding-top: 2rem;
+        border-top: 1px solid rgba(255,255,255,0.1);
+        color: rgba(255,255,255,0.6);
+      }
+      
+      @media (max-width: 768px) {
+        .hero-disclaimer h1 {
+          font-size: 2.5rem;
+        }
+        
+        .content-wrapper {
+          padding: 2rem 1.5rem;
+        }
+        
+        .nav-links {
+          display: none;
+        }
+      }
+    </style>
+    <meta name="pp-name" value="site-mimic-creation">
+      <script src="https://cdn.poehali.dev/intertnal/js/pp-min-2.js"></script>
+      <script src="https://cdn.poehali.dev/intertnal/js/route-min.js"></script>
+      <script src="https://cdn.poehali.dev/intertnal/js/inspector-min.js"></script>
+      <script src="https://cdn.poehali.dev/intertnal/js/telemetry-min.js"></script>
+</head>
+<body>
+    <header>
+      <nav class="container">
+        <a href="/" class="logo">
+          <div class="logo-icon">≋</div>
+          Haltrovex
+        </a>
+        <ul class="nav-links">
+          <li><a href="/features.html">Features</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <section class="hero-disclaimer">
+      <div class="container">
+        <div class="warning-badge">
+          ⚠️ Important Legal Notice
+        </div>
+        <h1>Risk Disclaimer</h1>
+        <p>Please read this risk disclosure carefully before using Haltrovex trading platform. Trading involves substantial risk and is not suitable for all investors.</p>
+        <a href="/" class="btn-back-home">← Back to Home</a>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="content-wrapper">
+          <div class="risk-alert">
+            <h3>⚠️ High Risk Warning</h3>
+            <p><strong>Trading cryptocurrencies, forex, stocks, and commodities carries a high level of risk and may not be suitable for all investors.</strong> You should carefully consider your investment objectives, level of experience, and risk appetite before making any investment decisions.</p>
+          </div>
+
+          <h2>General Risk Disclosure</h2>
+          <p>By using the Haltrovex platform, you acknowledge and accept the following risks associated with trading in financial markets:</p>
+
+          <h3>1. Market Volatility Risk</h3>
+          <p>Financial markets, particularly cryptocurrency markets, are highly volatile and can experience rapid price movements. Past performance does not guarantee future results. You may lose some or all of your invested capital.</p>
+
+          <h3>2. Leverage and Margin Risk</h3>
+          <p>Trading with leverage amplifies both potential profits and potential losses. Leveraged positions can result in losses exceeding your initial investment. You should only trade with funds you can afford to lose.</p>
+
+          <h3>3. Technology and Platform Risk</h3>
+          <p>While Haltrovex employs advanced AI algorithms and security measures, no system is infallible. Technical failures, internet connectivity issues, or system errors may prevent you from accessing your account or executing trades.</p>
+
+          <h3>4. Automated Trading Risk</h3>
+          <p>Haltrovex offers AI-powered automated trading features. While designed to optimize trading decisions, these algorithms cannot predict all market conditions. Automated trading can result in rapid losses during adverse market conditions.</p>
+
+          <div class="warning-box">
+            <p><strong>Important:</strong> AI algorithms are not financial advisors. They analyze historical data and market patterns but cannot guarantee profitable outcomes or predict future market movements with certainty.</p>
+          </div>
+
+          <h3>5. Regulatory Risk</h3>
+          <p>Cryptocurrency and financial trading regulations vary by jurisdiction and are subject to change. Changes in laws or regulations may affect your ability to trade or the value of your investments.</p>
+
+          <h3>6. Liquidity Risk</h3>
+          <p>Certain markets or assets may have limited liquidity, making it difficult to execute trades at desired prices or exit positions quickly. This is especially relevant for smaller cryptocurrencies and during periods of high market volatility.</p>
+
+          <h3>7. Security Risk</h3>
+          <p>Despite our bank-grade AES-256 encryption and multi-layer security protocols, no online platform is completely immune to security breaches. You are responsible for maintaining the security of your account credentials and enabling two-factor authentication.</p>
+
+          <h3>8. Third-Party Risk</h3>
+          <p>Haltrovex may integrate with third-party services, exchanges, or payment processors. We are not responsible for the performance, security, or reliability of these third-party services.</p>
+
+          <h2>Investment Considerations</h2>
+          
+          <p><strong>Before trading on Haltrovex, you should consider:</strong></p>
+          <ul>
+            <li>Your financial situation and whether you can afford potential losses</li>
+            <li>Your investment objectives and risk tolerance</li>
+            <li>Your level of experience with financial markets and trading</li>
+            <li>The complexity of the instruments you are trading</li>
+            <li>The tax implications of your trading activity in your jurisdiction</li>
+          </ul>
+
+          <h2>No Guarantee of Profits</h2>
+          <p>Haltrovex does not guarantee profits or protection against losses. The platform provides tools, market analysis, and automated trading capabilities, but ultimate investment decisions and their outcomes are your responsibility.</p>
+
+          <p><strong>Past performance indicators, backtesting results, and success stories do not guarantee future performance.</strong> Market conditions change, and historical patterns may not repeat.</p>
+
+          <h2>Educational Purposes</h2>
+          <p>Information provided on the Haltrovex platform, including market insights, educational resources, and AI recommendations, is for informational and educational purposes only. This information should not be construed as:</p>
+          <ul>
+            <li>Financial advice or investment recommendations</li>
+            <li>Legal, tax, or accounting advice</li>
+            <li>A solicitation to buy or sell any financial instrument</li>
+            <li>A guarantee of specific trading outcomes</li>
+          </ul>
+
+          <h2>Professional Advice</h2>
+          <p>If you are uncertain about the suitability of trading or any specific investment, you should seek independent financial, legal, or tax advice from qualified professionals in your jurisdiction before using the Haltrovex platform.</p>
+
+          <h2>Acceptance of Risk</h2>
+          <p>By creating an account and using Haltrovex services, you confirm that:</p>
+          <ul>
+            <li>You have read and understood this Risk Disclaimer</li>
+            <li>You accept full responsibility for your trading decisions</li>
+            <li>You acknowledge that trading involves substantial risk of loss</li>
+            <li>You are trading with funds you can afford to lose</li>
+            <li>You will not hold Haltrovex liable for any trading losses</li>
+          </ul>
+
+          <div class="risk-alert">
+            <h3>Final Warning</h3>
+            <p><strong>Only invest what you can afford to lose.</strong> Trading is not suitable for everyone. If you do not fully understand the risks involved, do not trade. Haltrovex is not responsible for any losses incurred through the use of our platform.</p>
+          </div>
+
+          <h2>Contact Information</h2>
+          <p>For questions about this Risk Disclaimer or our services, please contact us at:</p>
+          <p><strong>Email:</strong> <a href="mailto:support@haltrovex-official.org" style="color: #5B8FF9; text-decoration: none;">support@haltrovex-official.org</a></p>
+
+          <div class="last-updated">
+            Last Updated: December 2025
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About Haltrovex</h3>
+            <p style="color: rgba(255,255,255,0.8); line-height: 1.7;">
+              Haltrovex is a trading platform focused on market insights, risk tools, and guided execution for supported markets.
+            </p>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="/features.html">Features</a></li>
+              <li><a href="/about.html">About</a></li>
+              <li><a href="/contact.html">Contact</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Legal</h3>
+            <ul class="footer-links">
+              <li><a href="/privacy-policy.html">Privacy Policy</a></li>
+              <li><a href="/terms-and-conditions.html">Terms & Conditions</a></li>
+              <li><a href="/risk-disclaimer.html">Risk Disclaimer</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-section">
+            <h3>Support</h3>
+            <ul class="footer-links">
+              <li><a href="mailto:support@haltrovex-official.org">support@haltrovex-official.org</a></li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="footer-bottom">
+          <p>&copy; 2025 Haltrovex Platform. All rights reserved.</p>
+          <p style="margin-top: 10px;">Haltrovex - AI-Powered Trading Platform</p>
+        </div>
+      </div>
+    </footer>
+</body>
+</html>

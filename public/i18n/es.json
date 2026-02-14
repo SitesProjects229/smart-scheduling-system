@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Haltrovex Official™ — Plataforma de Trading con IA 2026 | Trading Automatizado de Crypto, Forex y Acciones",
+    "description": "Haltrovex es la plataforma oficial de trading con IA en haltrovex-official.org. Automatiza el trading de crypto, forex y acciones con algoritmos inteligentes. Confiable en todo el mundo. Comienza gratis hoy.",
+    "keywords": "Haltrovex, Haltrovex oficial, haltrovex-official.org, Plataforma Haltrovex, Trading Haltrovex, Haltrovex app, Haltrovex opiniones 2026, plataforma de trading IA, trading automatizado, bot de trading crypto, IA trading forex, automatización trading acciones"
+  },
+  "hero": {
+    "title": "Haltrovex — Plataforma Oficial de Trading con IA",
+    "subtitle": "Haltrovex es una plataforma oficial de trading impulsada por IA diseñada para usuarios que desean acceso simplificado a crypto, forex, acciones y materias primas a través de automatización inteligente.",
+    "brandInfo": "Haltrovex™ es la marca y plataforma oficial. El único sitio web oficial es",
+    "excellent": "Excelente"
+  },
+  "form": {
+    "heading": "Completa el formulario para comenzar",
+    "firstName": "Nombre",
+    "lastName": "Apellido",
+    "email": "Correo Electrónico",
+    "phone": "Número de Teléfono",
+    "submit": "REGISTRARSE AHORA",
+    "security": "Tus datos están encriptados y protegidos por protocolos de seguridad",
+    "disclaimer": "Al proporcionar tu información, reconoces que has leído, entendido y aceptado los Términos de Uso y la Política de Privacidad de este sitio web."
+  },
+  "aiTools": {
+    "title": "Herramientas con IA para",
+    "titleHighlight": "Trading más Inteligente",
+    "description": "Haltrovex combina inteligencia artificial de vanguardia con diseño intuitivo para proporcionar a los traders información en tiempo real, estrategias automatizadas y ejecución perfecta en múltiples mercados.",
+    "tool1Title": "Análisis Predictivo del Mercado",
+    "tool1Desc": "Nuestros algoritmos de IA analizan millones de puntos de datos para predecir tendencias del mercado antes de que ocurran, dándote una ventaja competitiva.",
+    "tool2Title": "Gestión Automatizada de Cartera",
+    "tool2Desc": "Establece tus preferencias de riesgo y deja que nuestro sistema inteligente equilibre automáticamente tu cartera para obtener rendimientos óptimos.",
+    "tool3Title": "Detección de Señales en Tiempo Real",
+    "tool3Desc": "Recibe alertas instantáneas sobre oportunidades de trading rentables en mercados de crypto, forex y acciones 24/7."
+  },
+  "dashboard": {
+    "title": "Tu Panel de",
+    "titleHighlight": "Trading Personal",
+    "text1": "Accede a tu ecosistema completo de trading desde una interfaz intuitiva. Monitorea los mercados en vivo, rastrea el rendimiento de tu cartera y ejecuta operaciones con confianza.",
+    "text2": "Nuestro panel proporciona visualización de datos en tiempo real, herramientas de gráficos avanzadas y capacidades de ejecución instantánea, todo diseñado para ayudarte a tomar decisiones informadas más rápido.",
+    "beginJourney": "Comienza tu Viaje",
+    "liveTrading": "Trading en Vivo",
+    "profit": "+24,5% Ganancia",
+    "priceChange": "+$1.234,56 (5,2%)",
+    "marketOpen": "Mercado Abierto",
+    "holdRecommendation": "MANTENER"
+  },
+  "mastery": {
+    "subtitle": "Únete a miles de traders que han transformado su enfoque de inversión",
+    "title": "Domina los Mercados en Tres Simples Pasos",
+    "step1Title": "Crea tu Cuenta",
+    "step1Desc": "Regístrate en minutos y completa un proceso de verificación simple. No se requiere configuración compleja.",
+    "step2Title": "Configura tu Estrategia",
+    "step2Desc": "Elige entre estrategias de IA prediseñadas o personaliza la tuya. Establece tu tolerancia al riesgo y objetivos de inversión.",
+    "step3Title": "Comienza a Operar Automáticamente",
+    "step3Desc": "Observa cómo nuestra IA ejecuta operaciones en tu nombre, optimizando para obtener máximos rendimientos mientras te enfocas en lo que importa.",
+    "description1": "La plataforma de trading inteligente de Haltrovex maneja la complejidad mientras mantienes el control total. Nuestra tecnología funciona 24/7, analizando mercados y ejecutando estrategias con una precisión que supera las capacidades humanas.",
+    "description2": "Seas principiante o trader experimentado, Haltrovex se adapta a tus necesidades y crece con tu experiencia."
+  },
+  "reviews": {
+    "title": "Resultados Reales de Traders Reales",
+    "joinText": "¿Listo para unirte a nuestra comunidad de traders exitosos?",
+    "joinNow": "Únete a Haltrovex Ahora"
+  },
+  "countdown": {
+    "badge": "Oferta por Tiempo Limitado",
+    "title": "¡Bono de Bienvenida Exclusivo Termina Pronto!",
+    "subtitle": "Los nuevos usuarios obtienen funciones premium gratis durante 30 días",
+    "days": "Días",
+    "hours": "Horas",
+    "minutes": "Minutos",
+    "seconds": "Segundos",
+    "claimBonus": "Reclama tu Bono",
+    "spotsRemaining": "¡Solo quedan 47 lugares en este nivel de bono!"
+  },
+  "certification": {
+    "title": "Plataforma de Trading Certificada y Regulada",
+    "description": "Haltrovex opera bajo estrictas regulaciones financieras y mantiene los más altos estándares de seguridad. Tus inversiones están protegidas por encriptación líder en la industria y protocolos de cumplimiento.",
+    "viewCertificate": "Ver Certificado",
+    "hideDetails": "Ocultar Detalles"
+  }
+}

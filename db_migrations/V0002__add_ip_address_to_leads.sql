@@ -1,0 +1,1 @@
+ALTER TABLE leads ADD COLUMN ip_address VARCHAR(45);

@@ -1,0 +1,87 @@
+{
+  "meta": {
+    "title": "Haltrovex Official™ — AI-Powered Trading Platform 2026 | Automated Crypto, Forex & Stock Trading",
+    "description": "Haltrovex is the official AI trading platform at haltrovex-official.org. Automate crypto, forex & stock trading with intelligent algorithms. Trusted by traders worldwide. Join Haltrovex free today.",
+    "keywords": "Haltrovex, Haltrovex official, haltrovex-official.org, Haltrovex platform, Haltrovex trading, Haltrovex app, Haltrovex login, Haltrovex review 2026, AI trading platform, automated trading, crypto trading bot, forex trading AI, stock trading automation"
+  },
+  "hero": {
+    "title": "Haltrovex — Official AI Trading Platform",
+    "subtitle": "Haltrovex is an official AI-driven trading platform designed for users who want simplified access to crypto, forex, stocks, and commodities through intelligent automation.",
+    "brandInfo": "Haltrovex™ is the official brand and platform. The only official website is",
+    "excellent": "Excellent"
+  },
+  "calculator": {
+    "title": "Calculate Your Potential Earnings",
+    "subtitle": "Adjust the slider to see estimated daily earnings",
+    "tradingDays": "Trading Days:",
+    "estimatedEarnings": "Estimated Earnings:",
+    "note": "* Based on average platform performance. Actual results may vary."
+  },
+  "form": {
+    "heading": "Fill out the form below to start",
+    "firstName": "First Name",
+    "lastName": "Last Name",
+    "email": "Email Address",
+    "phone": "Phone Number",
+    "submit": "REGISTER NOW",
+    "security": "Your data is encrypted and protected by security protocols",
+    "disclaimer": "By providing your information, you acknowledge that you have read, understood and accepted the Terms of Use and Privacy Policy of this website."
+  },
+  "aiTools": {
+    "title": "AI-Powered Tools for",
+    "titleHighlight": "Smarter Trading",
+    "description": "Haltrovex combines cutting-edge artificial intelligence with intuitive design to provide traders with real-time insights, automated strategies, and seamless execution across multiple markets.",
+    "tool1Title": "Predictive Market Analysis",
+    "tool1Desc": "Our AI algorithms analyze millions of data points to forecast market trends before they happen, giving you a competitive edge.",
+    "tool2Title": "Automated Portfolio Management",
+    "tool2Desc": "Set your risk preferences and let our intelligent system automatically balance your portfolio for optimal returns.",
+    "tool3Title": "Real-Time Signal Detection",
+    "tool3Desc": "Get instant alerts on profitable trading opportunities across crypto, forex, and stock markets 24/7."
+  },
+  "dashboard": {
+    "title": "Your Personal",
+    "titleHighlight": "Trading Dashboard",
+    "text1": "Access your complete trading ecosystem from one intuitive interface. Monitor live markets, track your portfolio performance, and execute trades with confidence.",
+    "text2": "Our dashboard provides real-time data visualization, advanced charting tools, and instant execution capabilities - all designed to help you make informed decisions faster.",
+    "beginJourney": "Begin Your Journey",
+    "liveTrading": "Live Trading",
+    "profit": "+24.5% Profit",
+    "priceChange": "+$1,234.56 (5.2%)",
+    "marketOpen": "Market Open",
+    "holdRecommendation": "HOLD"
+  },
+  "mastery": {
+    "subtitle": "Join thousands of traders who have transformed their investment approach",
+    "title": "Master the Markets in Three Simple Steps",
+    "step1Title": "Create Your Account",
+    "step1Desc": "Sign up in minutes and complete a simple verification process. No complex setup required.",
+    "step2Title": "Configure Your Strategy",
+    "step2Desc": "Choose from pre-built AI strategies or customize your own. Set your risk tolerance and investment goals.",
+    "step3Title": "Start Trading Automatically",
+    "step3Desc": "Watch as our AI executes trades on your behalf, optimizing for maximum returns while you focus on what matters.",
+    "description1": "Haltrovex's intelligent trading platform handles the complexity while you maintain full control. Our technology works 24/7, analyzing markets and executing strategies with precision that surpasses human capabilities.",
+    "description2": "Whether you're a beginner or an experienced trader, Haltrovex adapts to your needs and grows with your expertise."
+  },
+  "reviews": {
+    "title": "Real Results from Real Traders",
+    "joinText": "Ready to join our community of successful traders?",
+    "joinNow": "Join Haltrovex Now"
+  },
+  "countdown": {
+    "badge": "Limited Time Offer",
+    "title": "Exclusive Welcome Bonus Ending Soon!",
+    "subtitle": "New users get premium features free for 30 days",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "claimBonus": "Claim Your Bonus",
+    "spotsRemaining": "Only 47 spots remaining at this bonus level!"
+  },
+  "certification": {
+    "title": "Certified & Regulated Trading Platform",
+    "description": "Haltrovex operates under strict financial regulations and maintains the highest security standards. Your investments are protected by industry-leading encryption and compliance protocols.",
+    "viewCertificate": "View Certificate",
+    "hideDetails": "Hide Details"
+  }
+}

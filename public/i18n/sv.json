@@ -1,0 +1,80 @@
+{
+  "meta": {
+    "title": "Haltrovex Official™ — AI-driven handelsplattform 2026 | Automatiserad krypto-, forex- och aktiehandel",
+    "description": "Haltrovex är den officiella AI-handelsplattformen på haltrovex-official.org. Automatisera krypto-, forex- och aktiehandel med intelligenta algoritmer. Pålitlig världen över. Börja gratis idag.",
+    "keywords": "Haltrovex, Haltrovex officiell, haltrovex-official.org, Haltrovex-plattform, Haltrovex-handel, Haltrovex app, Haltrovex recension 2026, AI-handelsplattform, automatiserad handel, kryptohandelsbot, forex-handels-AI, aktiehandelsautomation"
+  },
+  "hero": {
+    "title": "Haltrovex — Officiell AI-handelsplattform",
+    "subtitle": "Haltrovex är en officiell AI-driven handelsplattform utformad för användare som vill ha förenklad åtkomst till krypto, forex, aktier och råvaror genom intelligent automation.",
+    "brandInfo": "Haltrovex™ är det officiella varumärket och plattformen. Den enda officiella webbplatsen är",
+    "excellent": "Utmärkt"
+  },
+  "form": {
+    "heading": "Fyll i formuläret nedan för att komma igång",
+    "firstName": "Förnamn",
+    "lastName": "Efternamn",
+    "email": "E-postadress",
+    "phone": "Telefonnummer",
+    "submit": "REGISTRERA NU",
+    "security": "Dina uppgifter är krypterade och skyddade av säkerhetsprotokoll",
+    "disclaimer": "Genom att lämna dina uppgifter bekräftar du att du har läst, förstått och accepterat denna webbplats användarvillkor och integritetspolicy."
+  },
+  "aiTools": {
+    "title": "AI-drivna verktyg för",
+    "titleHighlight": "Smartare handel",
+    "description": "Haltrovex kombinerar banbrytande artificiell intelligens med intuitiv design för att ge handlare realtidsinsikter, automatiserade strategier och sömlös utförande över flera marknader.",
+    "tool1Title": "Prediktiv marknadsanalys",
+    "tool1Desc": "Våra AI-algoritmer analyserar miljontals datapunkter för att förutsäga marknadstrender innan de inträffar, vilket ger dig en konkurrensfördel.",
+    "tool2Title": "Automatiserad portföljförvaltning",
+    "tool2Desc": "Ställ in dina riskpreferenser och låt vårt intelligenta system automatiskt balansera din portfölj för optimal avkastning.",
+    "tool3Title": "Realtidssignaldetektering",
+    "tool3Desc": "Få omedelbara varningar om lönsamma handelsmöjligheter inom krypto-, forex- och aktiemarknader dygnet runt."
+  },
+  "dashboard": {
+    "title": "Din personliga",
+    "titleHighlight": "handelsinstrumentpanel",
+    "text1": "Få åtkomst till ditt kompletta handelsekosystem från ett intuitivt gränssnitt. Övervaka livemarknader, spåra din portföljprestanda och utför affärer med självförtroende.",
+    "text2": "Vår instrumentpanel erbjuder datavisualisering i realtid, avancerade diagramverktyg och omedelbara exekveringsmöjligheter – allt utformat för att hjälpa dig fatta välgrundade beslut snabbare.",
+    "beginJourney": "Börja din resa",
+    "liveTrading": "Livehandel",
+    "profit": "+24,5% vinst",
+    "priceChange": "+1 234,56 kr (5,2%)",
+    "marketOpen": "Marknaden öppen",
+    "holdRecommendation": "HÅLL"
+  },
+  "mastery": {
+    "subtitle": "Anslut dig till tusentals handlare som har förändrat sin investeringsstrategi",
+    "title": "Bemästra marknaderna i tre enkla steg",
+    "step1Title": "Skapa ditt konto",
+    "step1Desc": "Registrera dig på några minuter och genomför en enkel verifieringsprocess. Ingen komplex installation krävs.",
+    "step2Title": "Konfigurera din strategi",
+    "step2Desc": "Välj bland färdiga AI-strategier eller anpassa din egen. Ställ in din risktolerans och investeringsmål.",
+    "step3Title": "Börja handla automatiskt",
+    "step3Desc": "Se hur vår AI utför affärer å dina vägnar och optimerar för maximal avkastning medan du fokuserar på det som är viktigt.",
+    "description1": "Haltrovexs intelligenta handelsplattform hanterar komplexiteten medan du behåller full kontroll. Vår teknologi arbetar dygnet runt, analyserar marknader och utför strategier med en precision som överträffar mänskliga förmågor.",
+    "description2": "Oavsett om du är nybörjare eller erfaren handlare anpassar sig Haltrovex till dina behov och växer med din expertis."
+  },
+  "reviews": {
+    "title": "Verkliga resultat från verkliga handlare",
+    "joinText": "Redo att ansluta dig till vår gemenskap av framgångsrika handlare?",
+    "joinNow": "Gå med i Haltrovex nu"
+  },
+  "countdown": {
+    "badge": "Tidsbegränsat erbjudande",
+    "title": "Exklusiv välkomstbonus slutar snart!",
+    "subtitle": "Nya användare får premiumfunktioner gratis i 30 dagar",
+    "days": "Dagar",
+    "hours": "Timmar",
+    "minutes": "Minuter",
+    "seconds": "Sekunder",
+    "claimBonus": "Ta din bonus",
+    "spotsRemaining": "Endast 47 platser kvar på denna bonusnivå!"
+  },
+  "certification": {
+    "title": "Certifierad och reglerad handelsplattform",
+    "description": "Haltrovex verkar under strikta finansiella regleringar och upprätthåller de högsta säkerhetsstandarderna. Dina investeringar skyddas av branschledande kryptering och efterlevnadsprotokoll.",
+    "viewCertificate": "Visa certifikat",
+    "hideDetails": "Dölj detaljer"
+  }
+}

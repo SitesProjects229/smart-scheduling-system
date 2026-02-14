@@ -2302,6 +2302,338 @@
         color: var(--text-muted);
         font-weight: 500;
       }
+
+      .top-traders-section {
+        padding: 5rem 0 6rem;
+        background: transparent;
+        overflow: hidden;
+      }
+
+      .top-traders-header {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
+
+      .top-traders-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        background: rgba(220, 38, 38, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.25);
+        padding: 0.5rem 1.2rem;
+        border-radius: 50px;
+        font-size: 0.85rem;
+        color: #F87171;
+        font-weight: 600;
+        margin-bottom: 1.5rem;
+        letter-spacing: 0.5px;
+        text-transform: uppercase;
+      }
+
+      .top-traders-title {
+        font-size: 3rem;
+        color: #F1F5F9;
+        font-weight: 800;
+        line-height: 1.15;
+        margin-bottom: 1rem;
+      }
+
+      .top-traders-title .highlight {
+        background: linear-gradient(135deg, #EF4444 0%, #DC2626 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+      }
+
+      .top-traders-subtitle {
+        color: #94A3B8;
+        font-size: 1.1rem;
+        max-width: 600px;
+        margin: 0 auto;
+        line-height: 1.7;
+      }
+
+      .podium-container {
+        display: flex;
+        justify-content: center;
+        align-items: flex-end;
+        gap: 1.5rem;
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 0 1rem;
+      }
+
+      .podium-card {
+        flex: 1;
+        max-width: 320px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        position: relative;
+      }
+
+      .podium-trader-info {
+        text-align: center;
+        margin-bottom: 1.5rem;
+        width: 100%;
+      }
+
+      .podium-avatar-wrapper {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 1rem;
+      }
+
+      .podium-avatar {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid rgba(220, 38, 38, 0.3);
+        transition: transform 0.3s, border-color 0.3s;
+      }
+
+      .podium-card:hover .podium-avatar {
+        transform: scale(1.05);
+        border-color: #DC2626;
+      }
+
+      .podium-card.gold .podium-avatar {
+        width: 100px;
+        height: 100px;
+        border: 4px solid #F59E0B;
+        box-shadow: 0 0 30px rgba(245, 158, 11, 0.3);
+      }
+
+      .podium-crown {
+        position: absolute;
+        top: -18px;
+        left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.8rem;
+        filter: drop-shadow(0 2px 4px rgba(245, 158, 11, 0.5));
+      }
+
+      .podium-rank {
+        position: absolute;
+        bottom: -6px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 28px;
+        height: 28px;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: 800;
+        font-size: 0.85rem;
+        color: white;
+        z-index: 2;
+      }
+
+      .podium-card.gold .podium-rank {
+        width: 32px;
+        height: 32px;
+        background: linear-gradient(135deg, #F59E0B, #D97706);
+        box-shadow: 0 4px 12px rgba(245, 158, 11, 0.5);
+      }
+
+      .podium-card.silver .podium-rank {
+        background: linear-gradient(135deg, #94A3B8, #64748B);
+        box-shadow: 0 4px 12px rgba(148, 163, 184, 0.4);
+      }
+
+      .podium-card.bronze .podium-rank {
+        background: linear-gradient(135deg, #D97706, #92400E);
+        box-shadow: 0 4px 12px rgba(217, 119, 6, 0.4);
+      }
+
+      .podium-name {
+        font-size: 1.15rem;
+        font-weight: 700;
+        color: #F1F5F9;
+        margin-bottom: 0.3rem;
+      }
+
+      .podium-card.gold .podium-name {
+        font-size: 1.3rem;
+      }
+
+      .podium-stars {
+        color: #DC2626;
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+        letter-spacing: 2px;
+      }
+
+      .podium-review {
+        font-size: 0.88rem;
+        color: #94A3B8;
+        line-height: 1.6;
+        font-style: italic;
+        padding: 0 0.5rem;
+        margin-bottom: 0.75rem;
+      }
+
+      .podium-card.gold .podium-review {
+        font-size: 0.92rem;
+      }
+
+      .podium-rating-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.35rem;
+        background: rgba(220, 38, 38, 0.1);
+        border: 1px solid rgba(220, 38, 38, 0.2);
+        padding: 0.3rem 0.8rem;
+        border-radius: 20px;
+        font-size: 0.8rem;
+        font-weight: 700;
+        color: #F87171;
+        margin-bottom: 0.5rem;
+      }
+
+      .podium-pedestal {
+        width: 100%;
+        border-radius: 16px 16px 0 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5rem 1.25rem;
+        position: relative;
+        overflow: hidden;
+        transition: transform 0.3s, box-shadow 0.3s;
+      }
+
+      .podium-card:hover .podium-pedestal {
+        transform: translateY(-4px);
+      }
+
+      .podium-card.gold .podium-pedestal {
+        height: 200px;
+        background: linear-gradient(180deg, rgba(245, 158, 11, 0.15) 0%, rgba(245, 158, 11, 0.05) 100%);
+        border: 1px solid rgba(245, 158, 11, 0.25);
+        border-bottom: none;
+        box-shadow: 0 -8px 40px rgba(245, 158, 11, 0.1);
+      }
+
+      .podium-card.silver .podium-pedestal {
+        height: 160px;
+        background: linear-gradient(180deg, rgba(148, 163, 184, 0.12) 0%, rgba(148, 163, 184, 0.04) 100%);
+        border: 1px solid rgba(148, 163, 184, 0.2);
+        border-bottom: none;
+        box-shadow: 0 -8px 30px rgba(148, 163, 184, 0.08);
+      }
+
+      .podium-card.bronze .podium-pedestal {
+        height: 130px;
+        background: linear-gradient(180deg, rgba(217, 119, 6, 0.12) 0%, rgba(217, 119, 6, 0.04) 100%);
+        border: 1px solid rgba(217, 119, 6, 0.2);
+        border-bottom: none;
+        box-shadow: 0 -8px 30px rgba(217, 119, 6, 0.08);
+      }
+
+      .podium-earnings-label {
+        font-size: 0.7rem;
+        color: #64748B;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        margin-bottom: 0.4rem;
+        font-weight: 600;
+      }
+
+      .podium-earnings {
+        font-size: 1.8rem;
+        font-weight: 800;
+        font-family: 'Montserrat', sans-serif;
+        margin-bottom: 0.3rem;
+      }
+
+      .podium-card.gold .podium-earnings {
+        font-size: 2.2rem;
+        color: #F59E0B;
+        text-shadow: 0 0 20px rgba(245, 158, 11, 0.3);
+      }
+
+      .podium-card.silver .podium-earnings {
+        color: #CBD5E1;
+        text-shadow: 0 0 15px rgba(148, 163, 184, 0.2);
+      }
+
+      .podium-card.bronze .podium-earnings {
+        color: #D97706;
+        text-shadow: 0 0 15px rgba(217, 119, 6, 0.2);
+      }
+
+      .podium-period {
+        font-size: 0.75rem;
+        color: #64748B;
+        font-weight: 500;
+      }
+
+      .podium-pedestal::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 2px;
+      }
+
+      .podium-card.gold .podium-pedestal::before {
+        background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+      }
+
+      .podium-card.silver .podium-pedestal::before {
+        background: linear-gradient(90deg, transparent, #94A3B8, transparent);
+      }
+
+      .podium-card.bronze .podium-pedestal::before {
+        background: linear-gradient(90deg, transparent, #D97706, transparent);
+      }
+
+      @media (max-width: 768px) {
+        .podium-container {
+          flex-direction: column;
+          align-items: center;
+          gap: 2rem;
+        }
+
+        .podium-card {
+          max-width: 350px;
+          width: 100%;
+        }
+
+        .podium-card.gold .podium-pedestal,
+        .podium-card.silver .podium-pedestal,
+        .podium-card.bronze .podium-pedestal {
+          height: auto;
+          padding: 1.5rem;
+          border-radius: 16px;
+          border: 1px solid;
+        }
+
+        .podium-card.gold .podium-pedestal {
+          border-color: rgba(245, 158, 11, 0.25);
+        }
+
+        .podium-card.silver .podium-pedestal {
+          border-color: rgba(148, 163, 184, 0.2);
+        }
+
+        .podium-card.bronze .podium-pedestal {
+          border-color: rgba(217, 119, 6, 0.2);
+        }
+
+        .podium-card.gold {
+          order: -1;
+        }
+
+        .top-traders-title {
+          font-size: 2rem;
+        }
+      }
       
       .certification-section {
         background: rgba(255, 255, 255, 0.02);
@@ -3445,27 +3777,77 @@
       </div>
     </section>
 
-    <section class="container">
-      <div class="stats">
-        <div class="stat-card">
-          <div class="stat-number">$2.5B+</div>
-          <div class="stat-label">Total platform trading activity</div>
+    <section class="top-traders-section">
+      <div class="container">
+        <div class="top-traders-header">
+          <div class="top-traders-badge">
+            🏆 Leaderboard — February 2026
+          </div>
+          <h2 class="top-traders-title">
+            Top Traders <span class="highlight">of the Month</span>
+          </h2>
+          <p class="top-traders-subtitle">
+            Meet our highest-performing traders this month. Real people, real results — powered by Haltrovex AI.
+          </p>
         </div>
-        <div class="stat-card">
-          <div class="stat-number">150K+</div>
-          <div class="stat-label">Growing global trader community</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">99.9%</div>
-          <div class="stat-label">Uptime</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-number">24/7</div>
-          <div class="stat-label">Support</div>
+
+        <div class="podium-container">
+          <div class="podium-card silver">
+            <div class="podium-trader-info">
+              <div class="podium-avatar-wrapper">
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/f58f9c83-1b6d-4ff2-ade5-ffab6be963d5.jpg" alt="Hans Bergmann" class="podium-avatar">
+                <div class="podium-rank">2</div>
+              </div>
+              <div class="podium-name">Hans Bergmann</div>
+              <div class="podium-stars">★★★★★</div>
+              <div class="podium-rating-badge">⭐ 4.9 / 5.0</div>
+              <p class="podium-review">"I was skeptical at first, but Haltrovex changed everything. After 30 years in traditional finance, this AI does what I never could — consistent profits without the stress."</p>
+            </div>
+            <div class="podium-pedestal">
+              <div class="podium-earnings-label">Monthly earnings</div>
+              <div class="podium-earnings">$24,817</div>
+              <div class="podium-period">Feb 1 – Feb 15, 2026</div>
+            </div>
+          </div>
+
+          <div class="podium-card gold">
+            <div class="podium-trader-info">
+              <div class="podium-avatar-wrapper">
+                <div class="podium-crown">👑</div>
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/882551a4-2a70-4802-9a4e-f7e43257fb2f.jpg" alt="Richard Karlsson" class="podium-avatar">
+                <div class="podium-rank">1</div>
+              </div>
+              <div class="podium-name">Richard Karlsson</div>
+              <div class="podium-stars">★★★★★</div>
+              <div class="podium-rating-badge">⭐ 5.0 / 5.0</div>
+              <p class="podium-review">"Haltrovex completely transformed my retirement plan. I started with a modest investment and the AI turned it into a second income. At 58, I finally feel financially free. This platform is a game-changer."</p>
+            </div>
+            <div class="podium-pedestal">
+              <div class="podium-earnings-label">Monthly earnings</div>
+              <div class="podium-earnings">$31,454</div>
+              <div class="podium-period">Feb 1 – Feb 15, 2026</div>
+            </div>
+          </div>
+
+          <div class="podium-card bronze">
+            <div class="podium-trader-info">
+              <div class="podium-avatar-wrapper">
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/327bb78f-8ed4-4202-a389-23f89ae8159c.jpg" alt="Sophie Lindqvist" class="podium-avatar">
+                <div class="podium-rank">3</div>
+              </div>
+              <div class="podium-name">Sophie Lindqvist</div>
+              <div class="podium-stars">★★★★★</div>
+              <div class="podium-rating-badge">⭐ 4.8 / 5.0</div>
+              <p class="podium-review">"As a university graduate with no trading experience, I never imagined earning this much. Haltrovex AI does all the heavy lifting — I just watch my portfolio grow."</p>
+            </div>
+            <div class="podium-pedestal">
+              <div class="podium-earnings-label">Monthly earnings</div>
+              <div class="podium-earnings">$18,293</div>
+              <div class="podium-period">Feb 1 – Feb 15, 2026</div>
+            </div>
+          </div>
         </div>
       </div>
-      
-
     </section>
 
     <section class="ai-tools-section">

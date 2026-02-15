@@ -1110,8 +1110,8 @@
         background: rgba(15, 15, 15, 0.95);
         padding: 2rem;
         border-radius: 24px;
-        box-shadow: 0 8px 40px rgba(220, 38, 38, 0.08);
-        border: 1px solid rgba(220, 38, 38, 0.15);
+        box-shadow: 0 8px 40px rgba(16, 185, 129, 0.08);
+        border: 1px solid rgba(16, 185, 129, 0.15);
       }
       
       .chart-header {
@@ -1200,7 +1200,25 @@
       }
       
       .chart-line {
-        filter: drop-shadow(0 2px 4px rgba(220, 38, 38, 0.3));
+        filter: drop-shadow(0 2px 4px rgba(16, 185, 129, 0.4));
+      }
+      
+      .profit-badge-green {
+        background: #10B981;
+      }
+      
+      .asset-tag-green {
+        background: #10B981;
+      }
+      
+      .btn-growing {
+        background: rgba(16, 185, 129, 0.1);
+        color: #10B981;
+      }
+      
+      .btn-growing:hover {
+        background: #10B981;
+        color: white;
       }
       
       .chart-footer {
@@ -1208,7 +1226,7 @@
         justify-content: space-between;
         align-items: center;
         padding-top: 1rem;
-        border-top: 1px solid rgba(220, 38, 38, 0.15);
+        border-top: 1px solid rgba(16, 185, 129, 0.15);
       }
       
       .market-status {
@@ -4172,36 +4190,77 @@
               <div class="chart-header">
                 <div class="live-indicator">
                   <span class="live-dot"></span>
-                  <span class="live-text">Live Trading Dashboard</span>
+                  <span class="live-text">Community Profit</span>
                 </div>
-                <div class="profit-badge">+2.88%</div>
+                <div class="profit-badge profit-badge-green">+24.5% Profit</div>
               </div>
               
               <div class="chart-info">
-                <span class="asset-tag">BTC</span>
-                <div class="asset-price">$95758.74</div>
-                <div class="price-change">+85.30 (+0.089%)</div>
+                <span class="asset-tag asset-tag-green">PROFIT</span>
+                <div class="asset-price">$1,247,251.12</div>
+                <div class="price-change">+$187,420.65 this month</div>
               </div>
               
               <div class="chart-container">
                 <svg class="trading-chart" viewBox="0 0 400 200" preserveAspectRatio="none">
                   <defs>
                     <linearGradient id="chartGradient" x1="0%" y1="0%" x2="0%" y2="100%">
-                      <stop offset="0%" style="stop-color:#DC2626;stop-opacity:0.3" />
-                      <stop offset="100%" style="stop-color:#DC2626;stop-opacity:0" />
+                      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.35" />
+                      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0" />
                     </linearGradient>
+                    <linearGradient id="lineGlow" x1="0%" y1="0%" x2="100%" y2="0%">
+                      <stop offset="0%" style="stop-color:#10B981;stop-opacity:0.6" />
+                      <stop offset="50%" style="stop-color:#34D399;stop-opacity:1" />
+                      <stop offset="100%" style="stop-color:#10B981;stop-opacity:0.9" />
+                    </linearGradient>
+                    <filter id="glow">
+                      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                      <feMerge>
+                        <feMergeNode in="coloredBlur"/>
+                        <feMergeNode in="SourceGraphic"/>
+                      </feMerge>
+                    </filter>
                   </defs>
-                  <path class="chart-area" d="M 0 180 L 0 120 Q 50 100 100 90 T 200 70 T 300 50 L 400 30 L 400 200 L 0 200 Z" fill="url(#chartGradient)"/>
-                  <path class="chart-line" d="M 0 120 Q 50 100 100 90 T 200 70 T 300 50 L 400 30" fill="none" stroke="#DC2626" stroke-width="3"/>
+                  <rect x="15" y="180" width="3" height="20" rx="1" fill="rgba(16,185,129,0.15)"/>
+                  <rect x="30" y="170" width="3" height="30" rx="1" fill="rgba(16,185,129,0.15)"/>
+                  <rect x="45" y="160" width="3" height="40" rx="1" fill="rgba(16,185,129,0.18)"/>
+                  <rect x="60" y="150" width="3" height="50" rx="1" fill="rgba(16,185,129,0.18)"/>
+                  <rect x="75" y="155" width="3" height="45" rx="1" fill="rgba(16,185,129,0.15)"/>
+                  <rect x="90" y="140" width="3" height="60" rx="1" fill="rgba(16,185,129,0.2)"/>
+                  <rect x="105" y="130" width="3" height="70" rx="1" fill="rgba(16,185,129,0.2)"/>
+                  <rect x="120" y="135" width="3" height="65" rx="1" fill="rgba(16,185,129,0.18)"/>
+                  <rect x="135" y="120" width="3" height="80" rx="1" fill="rgba(16,185,129,0.22)"/>
+                  <rect x="150" y="110" width="3" height="90" rx="1" fill="rgba(16,185,129,0.22)"/>
+                  <rect x="165" y="115" width="3" height="85" rx="1" fill="rgba(16,185,129,0.2)"/>
+                  <rect x="180" y="100" width="3" height="100" rx="1" fill="rgba(16,185,129,0.25)"/>
+                  <rect x="195" y="90" width="3" height="110" rx="1" fill="rgba(16,185,129,0.25)"/>
+                  <rect x="210" y="95" width="3" height="105" rx="1" fill="rgba(16,185,129,0.22)"/>
+                  <rect x="225" y="80" width="3" height="120" rx="1" fill="rgba(16,185,129,0.28)"/>
+                  <rect x="240" y="70" width="3" height="130" rx="1" fill="rgba(16,185,129,0.28)"/>
+                  <rect x="255" y="78" width="3" height="122" rx="1" fill="rgba(16,185,129,0.25)"/>
+                  <rect x="270" y="65" width="3" height="135" rx="1" fill="rgba(16,185,129,0.3)"/>
+                  <rect x="285" y="55" width="3" height="145" rx="1" fill="rgba(16,185,129,0.3)"/>
+                  <rect x="300" y="60" width="3" height="140" rx="1" fill="rgba(16,185,129,0.28)"/>
+                  <rect x="315" y="48" width="3" height="152" rx="1" fill="rgba(16,185,129,0.32)"/>
+                  <rect x="330" y="40" width="3" height="160" rx="1" fill="rgba(16,185,129,0.32)"/>
+                  <rect x="345" y="45" width="3" height="155" rx="1" fill="rgba(16,185,129,0.3)"/>
+                  <rect x="360" y="32" width="3" height="168" rx="1" fill="rgba(16,185,129,0.35)"/>
+                  <rect x="375" y="22" width="3" height="178" rx="1" fill="rgba(16,185,129,0.35)"/>
+                  <rect x="390" y="15" width="3" height="185" rx="1" fill="rgba(16,185,129,0.38)"/>
+                  <path class="chart-area" d="M 0 200 L 0 175 L 25 158 L 50 145 L 70 155 L 95 130 L 115 118 L 135 128 L 155 105 L 175 92 L 195 100 L 215 78 L 240 65 L 260 72 L 280 52 L 305 42 L 325 48 L 345 32 L 370 22 L 390 12 L 400 8 L 400 200 Z" fill="url(#chartGradient)"/>
+                  <path class="chart-line" d="M 0 175 L 25 158 L 50 145 L 70 155 L 95 130 L 115 118 L 135 128 L 155 105 L 175 92 L 195 100 L 215 78 L 240 65 L 260 72 L 280 52 L 305 42 L 325 48 L 345 32 L 370 22 L 390 12 L 400 8" fill="none" stroke="url(#lineGlow)" stroke-width="2.5" filter="url(#glow)" stroke-linejoin="round"/>
+                  <path d="M 0 175 L 25 158 L 50 145 L 70 155 L 95 130 L 115 118 L 135 128 L 155 105 L 175 92 L 195 100 L 215 78 L 240 65 L 260 72 L 280 52 L 305 42 L 325 48 L 345 32 L 370 22 L 390 12 L 400 8" fill="none" stroke="#10B981" stroke-width="1" opacity="0.4" stroke-dasharray="2,4" transform="translate(0, -6)"/>
+                  <circle cx="400" cy="8" r="4" fill="#10B981" filter="url(#glow)"/>
+                  <circle cx="400" cy="8" r="2" fill="#FFFFFF"/>
                 </svg>
               </div>
               
               <div class="chart-footer">
                 <div class="market-status">
                   <span class="status-dot"></span>
-                  Market Open • Real-time data
+                  February 2025 • Live
                 </div>
-                <button class="btn-hold">HOLD</button>
+                <button class="btn-hold btn-growing">GROWING</button>
               </div>
             </div>
           </div>

@@ -1,5 +1,8 @@
-# Haltrovex Official - robots.txt
+# Haltrovex Official — robots.txt
 # https://haltrovex-official.org
+# Last updated: 2026-02-16
+
+# === Major Search Engine Crawlers (Full Access) ===
 
 User-agent: Googlebot
 Allow: /
@@ -9,6 +12,18 @@ User-agent: Googlebot-Image
 Allow: /
 
 User-agent: Googlebot-Mobile
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
+User-agent: Googlebot-Video
+Allow: /
+
+User-agent: Storebot-Google
+Allow: /
+
+User-agent: Google-InspectionTool
 Allow: /
 
 User-agent: Bingbot
@@ -31,6 +46,9 @@ User-agent: YandexBot
 Allow: /
 Crawl-delay: 1
 
+User-agent: YandexImages
+Allow: /
+
 User-agent: Sogou
 Allow: /
 Crawl-delay: 2
@@ -39,7 +57,16 @@ User-agent: Exabot
 Allow: /
 Crawl-delay: 2
 
+User-agent: Applebot
+Allow: /
+Crawl-delay: 1
+
+# === Social Media & Preview Bots (Full Access) ===
+
 User-agent: facebookexternalhit
+Allow: /
+
+User-agent: Facebot
 Allow: /
 
 User-agent: Twitterbot
@@ -54,15 +81,56 @@ Allow: /
 User-agent: TelegramBot
 Allow: /
 
-User-agent: Applebot
+User-agent: Slackbot
 Allow: /
-Crawl-delay: 1
 
-User-agent: *
+User-agent: Discordbot
+Allow: /
+
+User-agent: Pinterestbot
+Allow: /
+
+User-agent: Snapchat
+Allow: /
+
+# === AI & LLM Crawlers (Allow for visibility) ===
+
+User-agent: GPTBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Bytespider
 Allow: /
 Crawl-delay: 2
 
-# Block SEO crawlers / scrapers
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# === Default (All Other Bots) ===
+
+User-agent: *
+Allow: /
+Crawl-delay: 3
+
+# === Block SEO Scrapers / Spam Bots ===
+
 User-agent: AhrefsBot
 Disallow: /
 
@@ -81,15 +149,42 @@ Disallow: /
 User-agent: PetalBot
 Disallow: /
 
-# Disallow private areas
+User-agent: DataForSeoBot
+Disallow: /
+
+User-agent: ZoominfoBot
+Disallow: /
+
+User-agent: Screaming Frog SEO Spider
+Disallow: /
+
+User-agent: SeekportBot
+Disallow: /
+
+User-agent: Bytedance
+Disallow: /
+
+User-agent: MegaIndex.ru
+Disallow: /
+
+User-agent: BomboraBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+# === Protected Areas ===
+
+User-agent: *
 Disallow: /api/
 Disallow: /admin/
 Disallow: /backend/
 Disallow: /*.json$
 Disallow: /assets/*.map$
+Disallow: /src/
+Disallow: /node_modules/
 
-# Host
+# === Host & Sitemap ===
+
 Host: https://haltrovex-official.org
-
-# Sitemaps
 Sitemap: https://haltrovex-official.org/sitemap.xml

@@ -1,5 +1,5 @@
 # Haltrovex Official — robots.txt
-# https://haltrovex-official.org
+# https://grotuxiv-official.net
 # Last updated: 2026-02-16
 
 # === Major Search Engine Crawlers (Full Access) ===
@@ -186,5 +186,5 @@ Disallow: /node_modules/
 
 # === Host & Sitemap ===
 
-Host: https://haltrovex-official.org
-Sitemap: https://haltrovex-official.org/sitemap.xml
+Host: https://grotuxiv-official.net
+Sitemap: https://grotuxiv-official.net/sitemap.xml

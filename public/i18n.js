@@ -122,7 +122,7 @@ class I18n {
     if (heroP && !heroP.classList.contains('brand-info')) heroP.textContent = t.hero?.subtitle;
     
     const brandLink = document.querySelector('.brand-info a');
-    const brandHref = brandLink ? brandLink.href : 'https://haltrovex-official.org';
+    const brandHref = brandLink ? brandLink.href : 'https://grotuxiv-official.net';
     this.updateHTML('.brand-info', `${t.hero?.brandInfo} <a href="${brandHref}" style="color: #5B8FF9; text-decoration: none; font-weight: 600;">${brandHref}</a>`);
     
     const excellent = document.querySelector('.hero-left span[style*="font-weight: 700"]');

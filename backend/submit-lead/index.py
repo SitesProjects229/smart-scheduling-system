@@ -164,19 +164,33 @@ def handler(event: Dict[str, Any], context: Any) -> Dict[str, Any]:
     # Phone already includes country dial code from frontend
     phone_formatted = phone.lstrip('+')
     
-    spam_marker = "⚠️ SPAM" if is_spam else ""
-    telegram_message = f"""🚀 НОВАЯ ЗАЯВКА {spam_marker}
+    lead_number = ""
+    if dsn:
+        try:
+            conn_num = psycopg2.connect(dsn)
+            conn_num.autocommit = True
+            cur_num = conn_num.cursor()
+            cur_num.execute("SELECT COUNT(*) FROM leads")
+            lead_number = str(cur_num.fetchone()[0])
+            cur_num.close()
+            conn_num.close()
+        except Exception:
+            lead_number = ""
 
-👤 Имя: `{first_name}`
-👤 Фамилия: `{last_name}`
-📧 Email: `{email}`
-📱 Телефон: +`{phone_formatted}`
-🌍 Страна: {country_name} ({country_code})
-🌐 IP: `{ip_address}`
-🌐 Platform: {platform}"""
-    
+    spam_marker = " | SPAM" if is_spam else ""
+    telegram_message = f"""🚀 Lead! №{lead_number}{spam_marker}
+
+Name: {first_name}
+Last name: {last_name}
+SUMMA: {first_name} {last_name}
+Email: {email}
+Phone number: +{phone_formatted}
+Country: {country_name} ({country_code})
+Platform: {platform}
+IP Address: {ip_address}"""
+
     if is_spam and spam_reason:
-        telegram_message += f"\n\n🚨 Причина спама: {spam_reason}"
+        telegram_message += f"\n\nSpam reason: {spam_reason}"
     
     telegram_url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
     data = urllib.parse.urlencode({

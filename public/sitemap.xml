@@ -1,50 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
-        xmlns:xhtml="http://www.w3.org/1999/xhtml"
-        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
-        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
-        http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
-
-  <url>
-    <loc>https://grotuxiv-official.net/</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>daily</changefreq>
-    <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.com/"/>
-    <xhtml:link rel="alternate" hreflang="en" href="https://grotuxiv-official.com/"/>
-    <xhtml:link rel="alternate" hreflang="en-GB" href="https://grotuxiv-official.co.uk/"/>
-    <xhtml:link rel="alternate" hreflang="fr" href="https://grotuxiv-official.fr/"/>
-    <xhtml:link rel="alternate" hreflang="es" href="https://grotuxiv-official.es/"/>
-    <xhtml:link rel="alternate" hreflang="it" href="https://grotuxiv-official.it/"/>
-    <xhtml:link rel="alternate" hreflang="de-AT" href="https://grotuxiv-official.at/"/>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://grotuxiv.co.kr/"/>
-    <image:image>
-      <image:loc>https://cdn.poehali.dev/projects/dec2b247-100c-4952-8c09-827ed14bdcb9/files/2956cb15-c0a6-4baa-98fd-9eebdce9d458.jpg</image:loc>
-      <image:title>Haltrovex Official — #1 AI-Powered Trading Platform 2026</image:title>
-      <image:caption>Haltrovex AI trading platform — automated crypto, forex and stock trading with up to 24.5% monthly returns trusted by 50,000+ investors worldwide</image:caption>
-    </image:image>
-  </url>
-
-  <url>
-    <loc>https://grotuxiv-official.net/contact.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-
-  <url>
-    <loc>https://grotuxiv-official.net/terms-and-conditions.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-  <url>
-    <loc>https://grotuxiv-official.net/privacy-policy.html</loc>
-    <lastmod>2026-02-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.4</priority>
-  </url>
-
-</urlset>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://grotuxiv-official.net/sitemap-main.xml</loc>
+    <lastmod>2026-02-23</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>https://grotuxiv-official.net/sitemap-pages.xml</loc>
+    <lastmod>2026-02-23</lastmod>
+  </sitemap>
+</sitemapindex>

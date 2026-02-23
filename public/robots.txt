@@ -1,8 +1,13 @@
-# Haltrovex Official — robots.txt
-# https://grotuxiv-official.net
-# Last updated: 2026-02-16
+# ============================================================
+# robots.txt — Haltrovex Official
+# Site: https://grotuxiv-official.net
+# Brand: Haltrovex | grotuxiv
+# Last updated: 2026-02-23
+# ============================================================
 
-# === Major Search Engine Crawlers (Full Access) ===
+# ============================================================
+# SECTION 1: GOOGLE CRAWLERS — FULL ACCESS (max crawl budget)
+# ============================================================
 
 User-agent: Googlebot
 Allow: /
@@ -26,7 +31,21 @@ Allow: /
 User-agent: Google-InspectionTool
 Allow: /
 
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: AdsBot-Google-Mobile
+Allow: /
+
+# ============================================================
+# SECTION 2: MAJOR SEARCH ENGINES — FULL ACCESS
+# ============================================================
+
 User-agent: Bingbot
+Allow: /
+Crawl-delay: 1
+
+User-agent: msnbot
 Allow: /
 Crawl-delay: 1
 
@@ -49,6 +68,9 @@ Crawl-delay: 1
 User-agent: YandexImages
 Allow: /
 
+User-agent: YandexMobileBot
+Allow: /
+
 User-agent: Sogou
 Allow: /
 Crawl-delay: 2
@@ -61,7 +83,15 @@ User-agent: Applebot
 Allow: /
 Crawl-delay: 1
 
-# === Social Media & Preview Bots (Full Access) ===
+User-agent: ia_archiver
+Allow: /
+
+User-agent: archive.org_bot
+Allow: /
+
+# ============================================================
+# SECTION 3: SOCIAL MEDIA & PREVIEW BOTS — FULL ACCESS
+# ============================================================
 
 User-agent: facebookexternalhit
 Allow: /
@@ -93,7 +123,15 @@ Allow: /
 User-agent: Snapchat
 Allow: /
 
-# === AI & LLM Crawlers (Allow for visibility) ===
+User-agent: Viber
+Allow: /
+
+User-agent: vkShare
+Allow: /
+
+# ============================================================
+# SECTION 4: AI / LLM CRAWLERS — FULL ACCESS (brand visibility)
+# ============================================================
 
 User-agent: GPTBot
 Allow: /
@@ -123,18 +161,38 @@ Allow: /
 User-agent: YouBot
 Allow: /
 
-# === Default (All Other Bots) ===
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+# ============================================================
+# SECTION 5: DEFAULT — ALL OTHER BOTS
+# ============================================================
 
 User-agent: *
 Allow: /
 Crawl-delay: 3
+Disallow: /api/
+Disallow: /admin/
+Disallow: /backend/
+Disallow: /src/
+Disallow: /node_modules/
+Disallow: /*.map$
+Disallow: /assets/*.map$
 
-# === Block SEO Scrapers / Spam Bots ===
+# ============================================================
+# SECTION 6: BLOCKED — SEO SCRAPERS & SPAM BOTS
+# ============================================================
 
 User-agent: AhrefsBot
 Disallow: /
 
 User-agent: SemrushBot
+Disallow: /
+
+User-agent: SemrushBot-BA
 Disallow: /
 
 User-agent: MJ12bot
@@ -161,9 +219,6 @@ Disallow: /
 User-agent: SeekportBot
 Disallow: /
 
-User-agent: Bytedance
-Disallow: /
-
 User-agent: MegaIndex.ru
 Disallow: /
 
@@ -173,18 +228,28 @@ Disallow: /
 User-agent: Timpibot
 Disallow: /
 
-# === Protected Areas ===
+User-agent: SiteAuditBot
+Disallow: /
 
-User-agent: *
-Disallow: /api/
-Disallow: /admin/
-Disallow: /backend/
-Disallow: /*.json$
-Disallow: /assets/*.map$
-Disallow: /src/
-Disallow: /node_modules/
+User-agent: serpstatbot
+Disallow: /
 
-# === Host & Sitemap ===
+User-agent: sistrix
+Disallow: /
 
-Host: https://grotuxiv-official.net
+User-agent: linkdexbot
+Disallow: /
+
+User-agent: Uptimebot
+Disallow: /
+
+User-agent: newspaper
+Disallow: /
+
+# ============================================================
+# SECTION 7: SITEMAPS
+# ============================================================
+
 Sitemap: https://grotuxiv-official.net/sitemap.xml
+Sitemap: https://grotuxiv-official.net/sitemap-main.xml
+Sitemap: https://grotuxiv-official.net/sitemap-pages.xml

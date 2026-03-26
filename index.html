@@ -56,7 +56,11 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://cdn.poehali.dev">
+    <link rel="preconnect" href="https://flagcdn.com">
+    <link rel="preconnect" href="https://www.cloudflare.com">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" media="print" onload="this.media='all'">
+    <noscript><link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet"></noscript>
     
     <script type="application/ld+json">
     {
@@ -261,6 +265,20 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+      }
+
+      /* Performance optimizations */
+      section {
+        contain: layout style;
+      }
+      .live-dot, .ai-tools-badge-dot, .portfolio-dot {
+        will-change: opacity;
+      }
+      .phone-device, .smartphone-frame {
+        will-change: transform;
+      }
+      img {
+        content-visibility: auto;
       }
       
       html {
@@ -2247,7 +2265,6 @@
       
       .review-card {
         background: rgba(255, 255, 255, 0.06);
-        backdrop-filter: blur(10px);
         padding: 1.75rem 1.5rem;
         border-radius: 16px;
         text-align: center;
@@ -2366,8 +2383,7 @@
       }
       
       .stat-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         padding: 2rem;
         border-radius: 16px;
         text-align: center;
@@ -2854,8 +2870,7 @@
       }
       
       .feature-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         padding: 2.5rem;
         border-radius: 20px;
         box-shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
@@ -2894,8 +2909,7 @@
       }
       
       .pricing-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         border-radius: 24px;
         padding: 3rem 2rem;
         text-align: center;
@@ -3241,8 +3255,7 @@
       }
       
       .office-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         padding: 2rem;
         border-radius: 20px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -3285,8 +3298,7 @@
       }
       
       .faq-item {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         margin-bottom: 1rem;
         border-radius: 16px;
         overflow: hidden;
@@ -3336,8 +3348,7 @@
       }
       
       .timer-box {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         padding: 1.5rem 2rem;
         border-radius: 16px;
         text-align: center;
@@ -3371,8 +3382,7 @@
       }
       
       .testimonial-card {
-        background: rgba(255, 255, 255, 0.02);
-        backdrop-filter: blur(10px);
+        background: rgba(255, 255, 255, 0.03);
         padding: 2rem;
         border-radius: 20px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
@@ -3913,7 +3923,7 @@
           <div class="podium-card silver">
             <div class="podium-trader-info">
               <div class="podium-avatar-wrapper">
-                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/60c2eb99-cc19-4f46-8fd2-5de6d5c8989f.jpg" alt="Hans Bergmann" class="podium-avatar">
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/60c2eb99-cc19-4f46-8fd2-5de6d5c8989f.jpg" alt="Hans Bergmann" class="podium-avatar" loading="lazy">
                 <div class="podium-rank">2</div>
               </div>
               <div class="podium-name"><img src="https://flagcdn.com/w40/it.png" alt="IT" style="width:20px;height:14px;border-radius:2px;vertical-align:middle;margin-right:6px">Marco Bianchi</div>
@@ -3932,7 +3942,7 @@
             <div class="podium-trader-info">
               <div class="podium-avatar-wrapper">
                 <div class="podium-crown">👑</div>
-                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/bucket/6bf28fd2-49c7-481a-bd69-5b4b01a8485d.png" alt="Richard Karlsson" class="podium-avatar">
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/bucket/6bf28fd2-49c7-481a-bd69-5b4b01a8485d.png" alt="Richard Karlsson" class="podium-avatar" loading="lazy">
                 <div class="podium-rank">1</div>
               </div>
               <div class="podium-name"><img src="https://flagcdn.com/w40/es.png" alt="ES" style="width:20px;height:14px;border-radius:2px;vertical-align:middle;margin-right:6px">Antonio Fernández</div>
@@ -3950,7 +3960,7 @@
           <div class="podium-card bronze">
             <div class="podium-trader-info">
               <div class="podium-avatar-wrapper">
-                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/327bb78f-8ed4-4202-a389-23f89ae8159c.jpg" alt="Sophie Lindqvist" class="podium-avatar">
+                <img src="https://cdn.poehali.dev/projects/8b7c6dab-f0be-4634-a904-7f91fe559f86/files/327bb78f-8ed4-4202-a389-23f89ae8159c.jpg" alt="Sophie Lindqvist" class="podium-avatar" loading="lazy">
                 <div class="podium-rank">3</div>
               </div>
               <div class="podium-name"><img src="https://flagcdn.com/w40/gb.png" alt="UK" style="width:20px;height:14px;border-radius:2px;vertical-align:middle;margin-right:6px">Emily Carter</div>
@@ -5387,32 +5397,36 @@
       
       // Detect user's country by IP — race all APIs, first valid wins
       async function detectUserCountry() {
+        // Cloudflare trace — текстовый ответ, парсим отдельно
+        const cfPromise = (async () => {
+          const ctrl = new AbortController();
+          setTimeout(() => ctrl.abort(), 3000);
+          const res = await fetch('https://www.cloudflare.com/cdn-cgi/trace', { signal: ctrl.signal });
+          const text = await res.text();
+          const m = text.match(/loc=([A-Z]{2})/);
+          if (m) return m[1].toLowerCase();
+          throw new Error();
+        })();
+
         const apis = [
           { url: 'https://freeipapi.com/api/json', field: 'countryCode' },
-          { url: 'https://ipwho.is/', field: 'country_code' },
-          { url: 'https://ipapi.co/json/', field: 'country_code' },
           { url: 'https://api.country.is/', field: 'country' },
+          { url: 'https://ipapi.co/json/', field: 'country_code' },
         ];
 
         const fetchOne = async (api) => {
           const ctrl = new AbortController();
-          const timer = setTimeout(() => ctrl.abort(), 4000);
-          try {
-            const res = await fetch(api.url, { signal: ctrl.signal });
-            clearTimeout(timer);
-            if (!res.ok) throw new Error();
-            const data = await res.json();
-            const code = data[api.field];
-            if (code && code.length === 2) return code.toLowerCase();
-            throw new Error();
-          } catch (e) {
-            clearTimeout(timer);
-            throw e;
-          }
+          setTimeout(() => ctrl.abort(), 3000);
+          const res = await fetch(api.url, { signal: ctrl.signal });
+          if (!res.ok) throw new Error();
+          const data = await res.json();
+          const code = data[api.field];
+          if (code && code.length === 2) return code.toLowerCase();
+          throw new Error();
         };
 
         try {
-          return await Promise.any(apis.map(fetchOne));
+          return await Promise.any([cfPromise, ...apis.map(fetchOne)]);
         } catch (e) {
           return 'us';
         }

@@ -5506,17 +5506,16 @@
       });
       
       // Toggle dropdown
-      selectBtn.addEventListener('click', (e) => {
-        e.stopPropagation();
-        dropdown.classList.toggle('active');
-      });
-      
-      // Close dropdown when clicking outside
-      document.addEventListener('click', (e) => {
-        if (!selectBtn.contains(e.target) && !dropdown.contains(e.target)) {
-          dropdown.classList.remove('active');
-        }
-      });
+      if (selectBtn) {
+        selectBtn.addEventListener('click', function(e) {
+          e.stopPropagation();
+          var willOpen = !dropdown.classList.contains('active');
+          document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
+            d.classList.remove('active');
+          });
+          if (willOpen) dropdown.classList.add('active');
+        });
+      }
       
       // Auto-detect country and set default
       detectUserCountry().then(countryCode => {
@@ -5565,10 +5564,8 @@
         }
 
         heroSelectBtn.addEventListener('click', function(e) {
-          e.preventDefault();
           e.stopPropagation();
           var willOpen = !heroDropdown.classList.contains('active');
-          // закрываем все другие дропдауны
           document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
             d.classList.remove('active');
           });
@@ -5591,13 +5588,14 @@
         });
       }
       
-      // Close dropdowns on outside click
+      // Close dropdowns on outside click — единый обработчик
       document.addEventListener('click', function(e) {
-        document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
-          if (!d.contains(e.target) && !d.previousElementSibling?.contains(e.target)) {
+        var clickedBtn = e.target.closest('.country-select-button');
+        if (!clickedBtn) {
+          document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
             d.classList.remove('active');
-          }
-        });
+          });
+        }
       });
     </script>
     

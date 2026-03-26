@@ -5554,7 +5554,7 @@
         // Toggle hero dropdown — position fixed relative to button
         function positionHeroDropdown() {
           var rect = heroSelectBtn.getBoundingClientRect();
-          heroDropdown.style.top = (rect.bottom + window.scrollY + 4) + 'px';
+          heroDropdown.style.top = (rect.bottom + 4) + 'px';
           heroDropdown.style.left = rect.left + 'px';
           heroDropdown.style.width = Math.max(rect.width, 220) + 'px';
         }

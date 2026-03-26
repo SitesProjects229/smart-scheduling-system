@@ -5387,38 +5387,26 @@
       
       // Detect user's country by IP and set default country code
       async function detectUserCountry() {
-        try {
-          // Try multiple geolocation APIs for reliability
-          const apis = [
-            { url: 'https://ip-api.com/json/?fields=countryCode', field: 'countryCode' },
-            { url: 'https://ipapi.co/json/', field: 'country_code' },
-            { url: 'https://api.country.is/', field: 'country' }
-          ];
-          
-          for (const api of apis) {
-            try {
-              const response = await fetch(api.url, { 
-                method: 'GET',
-                cache: 'no-cache'
-              });
-              
-              if (response.ok) {
-                const data = await response.json();
-                const countryCode = data[api.field];
-                
-                if (countryCode && countryCode.length === 2) {
-                  console.log('Detected country:', countryCode);
-                  return countryCode.toLowerCase();
-                }
-              }
-            } catch (err) {
-              console.log('API failed:', api.url, err);
-              continue;
+        const apis = [
+          { url: 'https://freeipapi.com/api/json', field: 'countryCode' },
+          { url: 'https://ipwho.is/', field: 'country_code' },
+          { url: 'https://ip-api.com/json/?fields=countryCode', field: 'countryCode' },
+        ];
+
+        for (const api of apis) {
+          try {
+            const ctrl = new AbortController();
+            const timer = setTimeout(() => ctrl.abort(), 3000);
+            const response = await fetch(api.url, { signal: ctrl.signal });
+            clearTimeout(timer);
+            if (response.ok) {
+              const data = await response.json();
+              const code = data[api.field];
+              if (code && code.length === 2) return code.toLowerCase();
             }
-          }
-          
-          console.log('All APIs failed, using default (US)');
-          return 'us';
+          } catch (e) { continue; }
+        }
+        return 'us';
         } catch (error) {
           console.log('Could not detect country, using default (US):', error);
           return 'us';

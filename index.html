@@ -3759,7 +3759,7 @@
       <script src="https://cdn.poehali.dev/intertnal/js/route-min.js"></script>
       <script src="https://cdn.poehali.dev/intertnal/js/inspector-min.js"></script>
       <script src="https://cdn.poehali.dev/intertnal/js/telemetry-min.js"></script>
-      <script src="/i18n.js?v=4"></script>
+
       <meta name="pp-name" value="smart-scheduling-system">
   </head>
   <body>
@@ -3775,55 +3775,7 @@
           <li><a href="/contact.html" data-i18n="header.contact">Contatti</a></li>
           <li><a href="/features.html" data-i18n="header.features">Funzionalità</a></li>
           <li><button class="btn-sign-in" onclick="scrollToForm()" data-i18n="header.signIn">Accedi</button></li>
-          <li class="language-selector">
-            <button class="language-btn" id="languageBtn" onclick="toggleLanguageDropdown(event)">
-              <img src="https://flagcdn.com/w40/it.png" alt="Italiano" class="lang-flag" id="selectedLangFlag">
-              <span id="selectedLangName">Italiano</span>
-              <span class="dropdown-arrow">▼</span>
-            </button>
-            <div class="language-dropdown" id="languageDropdown">
-              <button class="lang-option" onclick="changeLanguage('en', 'us', 'English')">
-                <img src="https://flagcdn.com/w40/us.png" alt="English">
-                <span>English</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('de', 'de', 'Deutsch')">
-                <img src="https://flagcdn.com/w40/de.png" alt="Deutsch">
-                <span>Deutsch</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('es', 'es', 'Español')">
-                <img src="https://flagcdn.com/w40/es.png" alt="Español">
-                <span>Español</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('fr', 'fr', 'Français')">
-                <img src="https://flagcdn.com/w40/fr.png" alt="Français">
-                <span>Français</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('it', 'it', 'Italiano')">
-                <img src="https://flagcdn.com/w40/it.png" alt="Italiano">
-                <span>Italiano</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('sv', 'se', 'Svenska')">
-                <img src="https://flagcdn.com/w40/se.png" alt="Svenska">
-                <span>Svenska</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('no', 'no', 'Norsk')">
-                <img src="https://flagcdn.com/w40/no.png" alt="Norsk">
-                <span>Norsk</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('fi', 'fi', 'Suomi')">
-                <img src="https://flagcdn.com/w40/fi.png" alt="Suomi">
-                <span>Suomi</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('ja', 'jp', '日本語')">
-                <img src="https://flagcdn.com/w40/jp.png" alt="日本語">
-                <span>日本語</span>
-              </button>
-              <button class="lang-option" onclick="changeLanguage('ko', 'kr', '한국어')">
-                <img src="https://flagcdn.com/w40/kr.png" alt="한국어">
-                <span>한국어</span>
-              </button>
-            </div>
-          </li>
+
         </ul>
       </nav>
     </header>
@@ -5719,26 +5671,11 @@
         }
       }
       
-      // Initialize translations on page load
+      // Load Italian translations
       (async function initTranslations() {
-        // Check for saved language preference
-        let lang = localStorage.getItem('selectedLanguage');
-        
-        // If no saved preference, auto-detect
-        if (!lang) {
-          lang = await detectLanguageFromCountry();
-        }
-        
-        // Set initial language
-        const langInfo = languageMap[lang] || languageMap['en'];
-        document.getElementById('selectedLangFlag').src = `https://flagcdn.com/w40/${langInfo.flag}.png`;
-        document.getElementById('selectedLangFlag').alt = langInfo.name;
-        document.getElementById('selectedLangName').textContent = langInfo.name;
-        
-        // Load translations
-        const translations = await loadTranslations(lang);
+        const translations = await loadTranslations('it');
         applyTranslations(translations);
-        currentLang = lang;
+        currentLang = 'it';
       })();
     </script>
     

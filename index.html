@@ -5385,28 +5385,37 @@
         { code: 'pe', dial: '+51', name: 'Peru' }
       ];
       
-      // Detect user's country by IP and set default country code
+      // Detect user's country by IP — race all APIs, first valid wins
       async function detectUserCountry() {
         const apis = [
           { url: 'https://freeipapi.com/api/json', field: 'countryCode' },
           { url: 'https://ipwho.is/', field: 'country_code' },
-          { url: 'https://ip-api.com/json/?fields=countryCode', field: 'countryCode' },
+          { url: 'https://ipapi.co/json/', field: 'country_code' },
+          { url: 'https://api.country.is/', field: 'country' },
         ];
 
-        for (const api of apis) {
+        const fetchOne = async (api) => {
+          const ctrl = new AbortController();
+          const timer = setTimeout(() => ctrl.abort(), 4000);
           try {
-            const ctrl = new AbortController();
-            const timer = setTimeout(() => ctrl.abort(), 3000);
-            const response = await fetch(api.url, { signal: ctrl.signal });
+            const res = await fetch(api.url, { signal: ctrl.signal });
             clearTimeout(timer);
-            if (response.ok) {
-              const data = await response.json();
-              const code = data[api.field];
-              if (code && code.length === 2) return code.toLowerCase();
-            }
-          } catch (e) { continue; }
+            if (!res.ok) throw new Error();
+            const data = await res.json();
+            const code = data[api.field];
+            if (code && code.length === 2) return code.toLowerCase();
+            throw new Error();
+          } catch (e) {
+            clearTimeout(timer);
+            throw e;
+          }
+        };
+
+        try {
+          return await Promise.any(apis.map(fetchOne));
+        } catch (e) {
+          return 'us';
         }
-        return 'us';
       }
       
       // Set country selector by country code

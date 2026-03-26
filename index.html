@@ -3176,12 +3176,17 @@
         max-height: 280px;
         overflow-y: auto;
         z-index: 99999;
-        display: none;
-        min-width: 220px;
+        min-width: 240px;
+        opacity: 0;
+        pointer-events: none;
+        transform: translateY(-6px);
+        transition: opacity 0.15s, transform 0.15s;
       }
       
       .country-select-dropdown.active {
-        display: block;
+        opacity: 1;
+        pointer-events: auto;
+        transform: translateY(0);
       }
       
       .country-option {
@@ -5556,15 +5561,21 @@
           var rect = heroSelectBtn.getBoundingClientRect();
           heroDropdown.style.top = (rect.bottom + 4) + 'px';
           heroDropdown.style.left = rect.left + 'px';
-          heroDropdown.style.width = Math.max(rect.width, 220) + 'px';
+          heroDropdown.style.width = Math.max(rect.width, 240) + 'px';
         }
 
-        heroSelectBtn.addEventListener('click', (e) => {
+        heroSelectBtn.addEventListener('click', function(e) {
+          e.preventDefault();
           e.stopPropagation();
-          var isOpening = !heroDropdown.classList.contains('active');
-          heroDropdown.classList.toggle('active');
-          dropdown.classList.remove('active');
-          if (isOpening) positionHeroDropdown();
+          var willOpen = !heroDropdown.classList.contains('active');
+          // закрываем все другие дропдауны
+          document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
+            d.classList.remove('active');
+          });
+          if (willOpen) {
+            positionHeroDropdown();
+            heroDropdown.classList.add('active');
+          }
         });
 
         window.addEventListener('resize', function() {
@@ -5580,11 +5591,13 @@
         });
       }
       
-      // Update close dropdown handler to handle both dropdowns
-      document.addEventListener('click', (e) => {
-        if (heroSelectBtn && !heroSelectBtn.contains(e.target) && !heroDropdown.contains(e.target)) {
-          heroDropdown.classList.remove('active');
-        }
+      // Close dropdowns on outside click
+      document.addEventListener('click', function(e) {
+        document.querySelectorAll('.country-select-dropdown').forEach(function(d) {
+          if (!d.contains(e.target) && !d.previousElementSibling?.contains(e.target)) {
+            d.classList.remove('active');
+          }
+        });
       });
     </script>
     

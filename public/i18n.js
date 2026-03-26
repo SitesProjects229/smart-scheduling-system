@@ -32,7 +32,7 @@ class I18n {
 
   async init() {
     const savedLang = localStorage.getItem('Haltrovex_language');
-    if (savedLang && this.supportedLanguages[savedLang]) {
+    if (savedLang && this.supportedLanguages[savedLang] && savedLang !== 'en') {
       this.currentLang = savedLang;
     } else {
       await this.detectLanguageByIP();
@@ -44,30 +44,18 @@ class I18n {
   }
 
   async detectLanguageByIP() {
+    // Default is always Italian unless IP says otherwise
+    this.currentLang = 'it';
     try {
       const response = await fetch('https://cloudflare.com/cdn-cgi/trace');
       const text = await response.text();
-      const lines = text.split('\n');
-      const locLine = lines.find(line => line.startsWith('loc='));
-      const countryCode = locLine ? locLine.split('=')[1] : null;
-      
+      const locLine = text.split('\n').find(l => l.startsWith('loc='));
+      const countryCode = locLine ? locLine.split('=')[1].trim() : null;
       if (countryCode && this.ipLanguageMap[countryCode]) {
         this.currentLang = this.ipLanguageMap[countryCode];
-        console.log('Language detected by IP:', countryCode, '->', this.currentLang);
-      } else {
-        const browserLang = navigator.language.split('-')[0];
-        if (this.supportedLanguages[browserLang]) {
-          this.currentLang = browserLang;
-          console.log('Language detected by browser:', browserLang);
-        }
       }
-    } catch (error) {
-      console.error('IP detection failed:', error);
-      const browserLang = navigator.language.split('-')[0];
-      if (this.supportedLanguages[browserLang]) {
-        this.currentLang = browserLang;
-        console.log('Fallback to browser language:', browserLang);
-      }
+    } catch (e) {
+      // keep default 'it'
     }
   }
 

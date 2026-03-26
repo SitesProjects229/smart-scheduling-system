@@ -1,11 +1,116 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <sitemap>
-    <loc>https://grotuxiv-official.net/sitemap-main.xml</loc>
-    <lastmod>2026-02-23</lastmod>
-  </sitemap>
-  <sitemap>
-    <loc>https://grotuxiv-official.net/sitemap-pages.xml</loc>
-    <lastmod>2026-02-23</lastmod>
-  </sitemap>
-</sitemapindex>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+
+  <!-- Home -->
+  <url>
+    <loc>https://grotuxiv-official.net/</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://grotuxiv-official.net/#de"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://grotuxiv-official.net/#fr"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://grotuxiv-official.net/#es"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://grotuxiv-official.net/#it"/>
+    <xhtml:link rel="alternate" hreflang="sv"        href="https://grotuxiv-official.net/#sv"/>
+    <xhtml:link rel="alternate" hreflang="nb"        href="https://grotuxiv-official.net/#no"/>
+    <xhtml:link rel="alternate" hreflang="fi"        href="https://grotuxiv-official.net/#fi"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://grotuxiv-official.net/#ja"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://grotuxiv-official.net/#ko"/>
+    <image:image>
+      <image:loc>https://cdn.poehali.dev/projects/dec2b247-100c-4952-8c09-827ed14bdcb9/files/2956cb15-c0a6-4baa-98fd-9eebdce9d458.jpg</image:loc>
+      <image:title>Haltrovex — AI Trading Platform</image:title>
+    </image:image>
+  </url>
+
+  <!-- About -->
+  <url>
+    <loc>https://grotuxiv-official.net/about.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/about.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/about.html"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://grotuxiv-official.net/about.html#de"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://grotuxiv-official.net/about.html#fr"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://grotuxiv-official.net/about.html#es"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://grotuxiv-official.net/about.html#it"/>
+    <xhtml:link rel="alternate" hreflang="sv"        href="https://grotuxiv-official.net/about.html#sv"/>
+    <xhtml:link rel="alternate" hreflang="nb"        href="https://grotuxiv-official.net/about.html#no"/>
+    <xhtml:link rel="alternate" hreflang="fi"        href="https://grotuxiv-official.net/about.html#fi"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://grotuxiv-official.net/about.html#ja"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://grotuxiv-official.net/about.html#ko"/>
+  </url>
+
+  <!-- Features -->
+  <url>
+    <loc>https://grotuxiv-official.net/features.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/features.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/features.html"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://grotuxiv-official.net/features.html#de"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://grotuxiv-official.net/features.html#fr"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://grotuxiv-official.net/features.html#es"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://grotuxiv-official.net/features.html#it"/>
+    <xhtml:link rel="alternate" hreflang="sv"        href="https://grotuxiv-official.net/features.html#sv"/>
+    <xhtml:link rel="alternate" hreflang="nb"        href="https://grotuxiv-official.net/features.html#no"/>
+    <xhtml:link rel="alternate" hreflang="fi"        href="https://grotuxiv-official.net/features.html#fi"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://grotuxiv-official.net/features.html#ja"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://grotuxiv-official.net/features.html#ko"/>
+  </url>
+
+  <!-- Contact -->
+  <url>
+    <loc>https://grotuxiv-official.net/contact.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/contact.html"/>
+    <xhtml:link rel="alternate" hreflang="de"        href="https://grotuxiv-official.net/contact.html#de"/>
+    <xhtml:link rel="alternate" hreflang="fr"        href="https://grotuxiv-official.net/contact.html#fr"/>
+    <xhtml:link rel="alternate" hreflang="es"        href="https://grotuxiv-official.net/contact.html#es"/>
+    <xhtml:link rel="alternate" hreflang="it"        href="https://grotuxiv-official.net/contact.html#it"/>
+    <xhtml:link rel="alternate" hreflang="sv"        href="https://grotuxiv-official.net/contact.html#sv"/>
+    <xhtml:link rel="alternate" hreflang="nb"        href="https://grotuxiv-official.net/contact.html#no"/>
+    <xhtml:link rel="alternate" hreflang="fi"        href="https://grotuxiv-official.net/contact.html#fi"/>
+    <xhtml:link rel="alternate" hreflang="ja"        href="https://grotuxiv-official.net/contact.html#ja"/>
+    <xhtml:link rel="alternate" hreflang="ko"        href="https://grotuxiv-official.net/contact.html#ko"/>
+  </url>
+
+  <!-- Privacy Policy -->
+  <url>
+    <loc>https://grotuxiv-official.net/privacy-policy.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/privacy-policy.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/privacy-policy.html"/>
+  </url>
+
+  <!-- Terms and Conditions -->
+  <url>
+    <loc>https://grotuxiv-official.net/terms-and-conditions.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/terms-and-conditions.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/terms-and-conditions.html"/>
+  </url>
+
+  <!-- Risk Disclaimer -->
+  <url>
+    <loc>https://grotuxiv-official.net/risk-disclaimer.html</loc>
+    <lastmod>2026-03-26</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://grotuxiv-official.net/risk-disclaimer.html"/>
+    <xhtml:link rel="alternate" hreflang="en"        href="https://grotuxiv-official.net/risk-disclaimer.html"/>
+  </url>
+
+</urlset>

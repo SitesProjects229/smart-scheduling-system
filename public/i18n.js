@@ -1,7 +1,7 @@
 // Haltrovex i18n System - Auto language detection & switching
 class I18n {
   constructor() {
-    this.currentLang = 'en';
+    this.currentLang = 'it';
     this.translations = {};
     this.supportedLanguages = {
       'en': { name: 'English', flag: 'gb', flagEmoji: '🇬🇧' },
@@ -130,10 +130,14 @@ class I18n {
     
     // Form
     this.updateText('.hero-form h3', t.form?.heading);
-    this.updatePlaceholder('input[placeholder*="Name"]', 0, t.form?.firstName);
-    this.updatePlaceholder('input[placeholder*="Name"]', 1, t.form?.lastName);
-    this.updatePlaceholder('input[placeholder*="Email"]', 0, t.form?.email);
-    this.updatePlaceholder('input[type="tel"]', 0, t.form?.phone);
+    const fnInput = document.getElementById('heroFirstName');
+    if (fnInput && t.form?.firstName) fnInput.placeholder = t.form.firstName;
+    const lnInput = document.getElementById('heroLastName');
+    if (lnInput && t.form?.lastName) lnInput.placeholder = t.form.lastName;
+    const emInput = document.getElementById('heroEmail');
+    if (emInput && t.form?.email) emInput.placeholder = t.form.email;
+    const phInput = document.getElementById('heroPhone');
+    if (phInput && t.form?.phone) phInput.placeholder = t.form.phone;
     this.updateText('.btn-submit-hero', t.form?.submit);
     this.updateText('.form-security', `🔒 ${t.form?.security}`);
     this.updateText('.form-disclaimer', t.form?.disclaimer);

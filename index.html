@@ -3167,20 +3167,17 @@
       }
       
       .country-select-dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        right: 0;
-        margin-top: 0.25rem;
-        background: rgba(0, 0, 0, 0.95);
+        position: fixed;
+        background: rgba(10, 10, 15, 0.98);
         backdrop-filter: blur(20px);
-        border: 2px solid rgba(220, 38, 38, 0.15);
+        border: 2px solid rgba(220, 38, 38, 0.25);
         border-radius: 12px;
-        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
-        max-height: 300px;
+        box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
+        max-height: 280px;
         overflow-y: auto;
-        z-index: 1000;
+        z-index: 99999;
         display: none;
+        min-width: 220px;
       }
       
       .country-select-dropdown.active {
@@ -5554,12 +5551,28 @@
           heroDropdown.appendChild(option);
         });
         
-        // Toggle hero dropdown
+        // Toggle hero dropdown — position fixed relative to button
+        function positionHeroDropdown() {
+          var rect = heroSelectBtn.getBoundingClientRect();
+          heroDropdown.style.top = (rect.bottom + window.scrollY + 4) + 'px';
+          heroDropdown.style.left = rect.left + 'px';
+          heroDropdown.style.width = Math.max(rect.width, 220) + 'px';
+        }
+
         heroSelectBtn.addEventListener('click', (e) => {
           e.stopPropagation();
+          var isOpening = !heroDropdown.classList.contains('active');
           heroDropdown.classList.toggle('active');
           dropdown.classList.remove('active');
+          if (isOpening) positionHeroDropdown();
         });
+
+        window.addEventListener('resize', function() {
+          if (heroDropdown.classList.contains('active')) positionHeroDropdown();
+        });
+        window.addEventListener('scroll', function() {
+          if (heroDropdown.classList.contains('active')) positionHeroDropdown();
+        }, true);
         
         // Auto-detect country and set default for hero form
         detectUserCountry().then(countryCode => {

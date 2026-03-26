@@ -32,10 +32,10 @@ class I18n {
 
   async init() {
     const savedLang = localStorage.getItem('Haltrovex_language');
-    if (savedLang && this.supportedLanguages[savedLang] && savedLang !== 'en') {
+    if (savedLang && this.supportedLanguages[savedLang]) {
       this.currentLang = savedLang;
     } else {
-      await this.detectLanguageByIP();
+      this.currentLang = 'it';
     }
     await this.loadTranslations(this.currentLang);
     this.applyTranslations();
